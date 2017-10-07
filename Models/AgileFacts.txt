@@ -1,0 +1,7 @@
+Tile Facts:
+Present Value is the value of an investment's future earnings in today's money.
+Net Present Value is the present value of an investment's earnings less the investment itself.
+The Software Development Iron Triangle represents how traditionally time, cost, and quality were variable while scope was immutable.
+Boehm's Curve is a cost curve that claims that cost increases exponentially the later on in the development lifecycle that a change is required.
+The Waterfall Model is a software development model characterized by gates where work in the next phase doesn't typically begin until the prior phase is complete.
+The Cone of Uncertainty represents the concept that the  closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.
