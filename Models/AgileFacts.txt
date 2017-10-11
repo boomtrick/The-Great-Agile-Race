@@ -5,3 +5,23 @@ The Software Development Iron Triangle represents how traditionally time, cost, 
 Boehm's Curve is a cost curve that claims that cost increases exponentially the later on in the development lifecycle that a change is required.
 The Waterfall Model is a software development model characterized by gates where work in the next phase doesn't typically begin until the prior phase is complete.
 The Cone of Uncertainty represents the concept that the  closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.
+Small additions or changes to a system’s capabilities is called an Increment.
+A software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback is called the Spiral Model.
+Takeuchi and Nonaka mention that Multilevel learning, Built-in instability, and self-organizing teams are traits of companies that are successful at process re-engineering.
+Each sprint should result in a potentially shippable product.
+In Scrum, developers volunteer to complete tasks within a sprint.
+One of the ScrumMaster’s duties is to make sure that no one gets overloaded.
+Activities such as defining the sprint goal, selecting stories from the product backlog, estimating those stories, and communicating how much work the team thinks can be completed during the sprint, is called Sprint Planning.
+The Daily Scrum should answer questions such as : What have you done since yesterday, what will you do today, and do you have any obstacles.
+Scrum of Scrums should answer the questions: What has your team done since we last met, what will your team do before we next meet, is there anything slowing your team down, and are you about to slow another team down?
+Refining acceptance criteria, and splitting or merging stories is called Backlog Grooming
+Sprint Review is when you demonstrate the work that was completed and discuss the work that was planned but not completed.
+The Sprint Retrospective answers the questions: What went well and what could be improved.
+Story points are an agreed upon unit of measure for estimating how much effort is required to implement a product backpack item or other pieces of work.
+The number of story points delivered during a sprint is called the Velocity
+To complete a release plan, you will need the team’s sprint budget, the stories in the roadmap, and the estimates for each story in the roadmap.
+A burndown chart can be used to show team progress for a sprint, for a release, and for the product delivery as a whole.
+Stories that are not independent can often be made more independent by combining them with other stories, or by splitting it in a different way.
+Testability is a critical aspect of any story. 
+Developers need to be adaptive, as the situation changes, the job that a user needs to perform can change as well.
+A spike is a kind of story that is used by development teams to eliminate technical uncertainty.
