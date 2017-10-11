@@ -8,13 +8,36 @@ package Controllers;
  */
 public class Position {
 
-	private int row;
-	private int col;
+	private int row=0;
+	private int col=0;
+	
 	
 	public Position(int row_, int col_) {
+
 		row=row_;
 		col=col_;
 		
 	}
+	public int getRow() {
+		return row;
+	}
+
+	public void setRow(int row) {
+		this.row = row;
+	}
+
+	public int getCol() {
+		return col;
+	}
+
+	public void setCol(int col) {
+		this.col = col;
+	}
+
+	public void setPosition(int Row, int Col) {
+		row = Row;
+		col = Col;
+	}
+	
 	
 }
