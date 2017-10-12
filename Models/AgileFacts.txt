@@ -23,5 +23,4 @@ To complete a release plan, you will need the team’s sprint budget, the storie
 A burndown chart can be used to show team progress for a sprint, for a release, and for the product delivery as a whole.
 Stories that are not independent can often be made more independent by combining them with other stories, or by splitting it in a different way.
 Testability is a critical aspect of any story. 
-Developers need to be adaptive, as the situation changes, the job that a user needs to perform can change as well.
 A spike is a kind of story that is used by development teams to eliminate technical uncertainty.

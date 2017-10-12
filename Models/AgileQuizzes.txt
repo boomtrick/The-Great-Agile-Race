@@ -1,7 +1,162 @@
 End of Sprint Quiz:
+
+Which of the following best describes Present Value?
+Correct Answer: B
+a)The shippable product at the end of each sprint.
+b)The value of an investment’s future earnings in today’s money.
+c)The small additions or changes to a system’s capabilities.
+d)The amount of value you place on your current product.
+
+Net Present Value is the present value of an investment’s earnings plus the investment.
+Correct Answer: B
+a)True
+b)False
+
+What does the Software Development Iron Triangle represent?
+Correct Answer: A
+A)How traditionally time, cost, and quality were variable while scope was immutable.
+B)How traditionally scope, quality, and time were variable while cost was immutable.
+C)How traditionally quality, scope, and cost were variable while time was immutable.
+D)How traditionally cost, scope, and time were variable while quality was immutable.
+
+Boehm’s Curve is a curve that claims that ____ increases exponentially the later on in the development lifecycle that a change is required.
+Correct Answer: D
+A)Time
+B)Quality
+C)Scope
+D)Cost
+
+The Waterfall Model is a software development model characterized by gates where work in the next phase doesn’t typically begin until what occurs?
+Correct Answer: A
+A)The prior phase is complete
+B)The team concludes that the next phase takes priority for development
+C)The supervisor gives the team permission to advance
+D)The investors hold a meeting with how to proceed.
+
 Which of the following best describes the "Cone of Uncertainty?"
 Correct Answer: D
 a)We never know exactly what we're building until later on in a project.
 b)A software delivery model that emphasizes iterative and incremental development.
 c)Another name for the Waterfall model.
 d)The closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.
+
+Regarding Agile, which of the following is an Increment?
+Correct Answer: C
+A)When you increase something
+B)When you include a large patch to a program
+C)When small additions or changes occur to a system’s capabilities
+D)None of the above
+
+What is the software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback?
+Correct Answer:A
+A)Spiral Model
+B)Revisit Model
+C)Double-Check Model
+D)The Waterfall redevelopment Model
+
+What are the traits that Takeuchi and Nonaka mention for companies that are successful at process re-engineering?
+Correct Answer: A
+A)Multilevel learning, Built-in instability, and self-organizing teams
+B)Self-organizing teams, Individual Work, Worker Specialization
+C)Multilevel learning, Worker Specialization, Self-organizing teams
+D)None of the above
+
+Each sprint should result in a potentially shippable product.
+Correct Answer: A
+A)True
+B)False
+
+How are tasks given within a sprint in Scrum?
+Correct Answer C:
+A)Tasks are assigned based on specialization
+B)Tasks are assigned based on availability
+C)Tasks are volunteered for
+D)Tasks are given based on current workload
+
+One of the ScrumMaster’s duties is to make sure that no one gets overloaded.
+Correct Answer: A
+A)True
+B)False
+
+Which of the following is NOT an activity in Sprint Planning?
+Correct Answer: D
+A)Defining the sprint goal
+B)Communicating how much work the team thinks can be completed during the sprint
+C)Selecting stories from the product backlog
+D)None of the above
+
+Which of the following is NOT a question that Daily Scrums should answer?
+Correct Answer: B
+A)What have you done since yesterday?
+B)When will you finish your task?
+C)What will you do today?
+D)Do you have any obstacles?
+
+Which of the following is a question that Scrum of Scrums should answer?
+Correct Answer: D
+A)What has your team done since we last met?
+B)What will your team do before we next meet?
+C)Is there anything slowing your team down?
+D)All of the above
+
+Refining acceptance criteria, and splitting or merging stories is called Backlog Grooming.
+Correct Answer: A
+A)True
+B)False
+
+Sprint Review answers the questions: What went well and what could be improved.
+Correct Answer: B
+A)True
+B)False
+
+The Sprint Retrospective answers the questions: What went well and what could be improved.
+Correct Answer: A
+A)True
+B)False
+
+How are the value of Story Points estimated?
+Correct Answer: C
+A)In Hours
+B)In Days
+C)They are agreed upon as a unit of measure for estimating how much effort is required
+D)They are a universally accepted unit of measure that roughly translates to a full work day.
+
+The number of story points delivered during a sprint is called the ___.
+Correct Answer: D
+A)Speed
+B)Acceleration
+C)Success Rate
+D)Velocity
+
+What is required to complete a release plan?
+Correct Answer: A
+A)The team’s sprint budget, the stories in the roadmap, and the estimates for each story in the roadmap.
+B)The final delivery date, the list of tasks in the sprints leading to the product completion, and all the stories involved with each sprint.
+C)Both A and B
+D)None of the above
+
+What can a Burndown chart be used to show team progress for?
+Correct Answer: D
+A)A sprint
+B)A release
+C)the product delivery as a whole
+D)All of the above
+
+What are some ways to make stories that are not independent more independent?
+Correct Answer: C
+A)By combining them with other stories
+B)By splitting the story in a different way
+C)Both A and B
+D)None of the above
+
+Testability isn’t important for any story.
+Correct Answer: B
+A)True
+B)False
+
+What is a kind of story that is used by development teams to eliminate technical uncertainty?
+Correct Answer: A
+A)Spike
+B)Nail
+C)Screw
+D)Testing
