@@ -2,7 +2,7 @@ package Models.Tests;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import Models.Question;
 
