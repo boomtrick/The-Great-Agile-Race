@@ -1,0 +1,47 @@
+{
+  "product": "Dialogue For The Great Agile Race",
+  "created": "10/07/2017",
+  "randomFacts":
+		[
+			{ "id": "01", "text": "Present Value is the value of an investment's future earnings in today's money." },
+			{ "id": "02", "text": "Net Present Value is the present value of an investment's earnings less the investment itself." },
+			{ "id": "03", "text": "The Software Development Iron Triangle represents how traditionally time, cost, and quality were variable while scope was immutable." },
+			{ "id": "04", "text": "Boehm's Curve is a cost curve that claims that cost increases exponentially the later on in the development lifecycle that a change is required." },
+			{ "id": "05", "text": "The Waterfall Model is a software development model characterized by gates where work in the next phase doesn't typically begin until the prior phase is complete." },
+			{ "id": "06", "text": "The Cone of Uncertainty represents the concept that the  closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software." },
+			{ "id": "07", "text": "Small additions or changes to a system’s capabilities is called an Increment."},
+			{ "id": "08", "text": "A software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback is called the Spiral Model."},
+			{ "id": "09", "text": "Takeuchi and Nonaka mention that Multilevel learning, Built-in instability, and self-organizing teams are traits of companies that are successful at process re-engineering."},
+			{ "id": "10", "text": "Each sprint should result in a potentially shippable product."},
+			{ "id": "11", "text": "In Scrum, developers volunteer to complete tasks within a sprint."},
+			{ "id": "12", "text": "One of the ScrumMaster’s duties is to make sure that no one gets overloaded."},
+			{ "id": "13", "text": "Activities such as defining the sprint goal, selecting stories from the product backlog, estimating those stories, and communicating how much work the team thinks can be completed during the sprint, is called Sprint Planning."},
+			{ "id": "14", "text": "The Daily Scrum should answer questions such as : What have you done since yesterday, what will you do today, and do you have any obstacles."},
+			{ "id": "15", "text": "Scrum of Scrums should answer the questions: What has your team done since we last met, what will your team do before we next meet, is there anything slowing your team down, and are you about to slow another team down?"},
+			{ "id": "16", "text": "Refining acceptance criteria, and splitting or merging stories is called Backlog Grooming"},
+			{ "id": "17", "text": "Sprint Review is when you demonstrate the work that was completed and discuss the work that was planned but not completed."},
+			{ "id": "18", "text": "The Sprint Retrospective answers the questions: What went well and what could be improved."},
+			{ "id": "19", "text": "Story points are an agreed upon unit of measure for estimating how much effort is required to implement a product backpack item or other pieces of work."},
+			{ "id": "20", "text": "The number of story points delivered during a sprint is called the Velocity"},
+			{ "id": "21", "text": "To complete a release plan, you will need the team’s sprint budget, the stories in the roadmap, and the estimates for each story in the roadmap."},
+			{ "id": "22", "text": "A burndown chart can be used to show team progress for a sprint, for a release, and for the product delivery as a whole."},
+			{ "id": "23", "text": "Stories that are not independent can often be made more independent by combining them with other stories, or by splitting it in a different way."},
+			{ "id": "24", "text": "Testability is a critical aspect of any story."},
+			{ "id": "25", "text": "A spike is a kind of story that is used by development teams to eliminate technical uncertainty."},
+		],
+	
+	"quizzes":
+	{	"quiz": [
+					{
+					 "id":"01", 
+					 "question":"Which of the following best describes Present Value?",
+					 "a":"The shippable product at the end of each sprint.",
+					 "b":"The value of an investment’s future earnings in today’s money.",
+					 "c":"The small additions or changes to a system’s capabilities.",
+					 "d":"The amount of value you place on your current product.",
+					 "answer":"b",
+					 "relatedFact":"01"
+					}
+				]
+	}
+}
