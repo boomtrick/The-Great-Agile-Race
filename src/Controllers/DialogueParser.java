@@ -1,6 +1,6 @@
 package Controllers;
 
-import Models.DialogueSingleton;
+import Models.Fact;
 import com.google.gson.Gson;
 public class DialogueParser {
 
@@ -8,8 +8,9 @@ public class DialogueParser {
 
     Gson gson = new Gson();
 
-    DialogueSingleton fact = gson.fromJson("{\"name\": \"John\"}", DialogueSingleton.class);
-
+    Fact fact = gson.fromJson("{\"name\": \"John\"}", Fact.class);
+    //DialogueSingleton fact = gson.fromJson("{\"name\": \"John\"}", DialogueSingleton.class);
+//Code will go here to parse Json
 
 
 
