@@ -7,7 +7,7 @@ import java.util.List;
 public class Board implements BoardI {
 
     private final List<List<PlayerI>> teams_;
-    private final List<TileI> tiles_;
+    //private final List<TileI> tiles_;
     private final int rowSize_;
 
 
