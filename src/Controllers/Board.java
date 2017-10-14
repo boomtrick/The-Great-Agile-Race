@@ -1,23 +1,44 @@
 package Controllers;
-/**
- * Created by zalmangagerman on 10/8/17.
- */
-import java.util.List;
 
-public class Board implements BoardI {
+import java.awt.*;
+import javax.swing.JPanel;
 
-    private final List<List<PlayerI>> teams_;
-    //private final List<TileI> tiles_;
-    private final int rowSize_;
+public class Board extends JPanel {
+	private Tile[][] tiles; 
+	private int rows;
+	private int cols;
+	
+	public Board(int rows, int cols)
+	{
+		setLayout(new GridLayout(rows,cols));
+		this.rows = rows;
+		this.cols = cols;
+		
+		tiles = new Tile[rows][cols];
+		
+		populateBoard();
+		
+	}
 
+	private void populateBoard() {
+		
+		for(int i = 0 ; i < rows; i++)
+		{
+			for (int j = 0; j < cols; j++)
+			{
+				Tile t = new Tile();
+				tiles [i][j] = t;
+				this.add(t);
+			}
+			
+		}
+		
+	}
+	
+	
+	
+   
+   
+   
 
-    public Board(int rowSize, List<List<PlayerI>> teams) {
-        rowSize_ = rowSize;
-        teams_ = teams;
-    }
-
-    @Override
-    public void movePlayerToTile(PlayerI player, int spaces) throws MoveException {
-
-    }
 }
