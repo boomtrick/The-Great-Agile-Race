@@ -133,7 +133,11 @@
 			"answer": "a",
 			"relatedFact": "03"
 		},
+<<<<<<< HEAD
+		 {
+=======
 		{
+>>>>>>> feature/Get_Facts_Methods
 			"id": "04",
 			"question": "Boehm’s Curve is a curve that claims that ____ increases exponentially the later on in the development lifecycle that a change is required.",
 			"a": "Time",
@@ -142,7 +146,12 @@
 			"d": "Cost",
 			"answer": "d",
 			"relatedFact": "04"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "05",
 			"question": "The Waterfall Model is a software development model characterized by gates where work in the next phase doesn’t typically begin until what occurs?",
 			"a": "The prior phase is complete",
@@ -151,7 +160,12 @@
 			"d": "The investors hold a meeting with how to proceed.",
 			"answer": "a",
 			"relatedFact": "05"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "06",
 			"question": "Which of the following best describes the Cone of Uncertainty?",
 			"a": "We never know exactly what we're building until later on in a project.",
@@ -160,7 +174,12 @@
 			"d": "The closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.",
 			"answer": "d",
 			"relatedFact": "06"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "07",
 			"question": "Regarding Agile, which of the following is an Increment?",
 			"a": "When you increase something",
@@ -169,7 +188,12 @@
 			"d": "None of the above",
 			"answer": "c",
 			"relatedFact": "07"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "08",
 			"question": "What is the software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback?",
 			"a": "Spiral Model",
@@ -178,7 +202,12 @@
 			"d": "The Waterfall redevelopment Model",
 			"answer": "a",
 			"relatedFact": "08"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "09",
 			"question": "What are the traits that Takeuchi and Nonaka mention for companies that are successful at process re-engineering?",
 			"a": "Multilevel learning, Built-in instability, and self-organizing teams",
@@ -187,7 +216,12 @@
 			"d": "None of the above",
 			"answer": "a",
 			"relatedFact": "09"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "10",
 			"question": "Each sprint should result in a potentially shippable product.",
 			"a": "True",
@@ -196,7 +230,12 @@
 			"d": "",
 			"answer": "a",
 			"relatedFact": "10"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "11",
 			"question": "How are tasks given within a sprint in Scrum?",
 			"a": "Tasks are assigned based on specialization",
@@ -205,7 +244,12 @@
 			"d": "Tasks are given based on current workload",
 			"answer": "c",
 			"relatedFact": "11"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "12",
 			"question": "One of the ScrumMaster’s duties is to make sure that no one gets overloaded.",
 			"a": "True",
@@ -214,7 +258,12 @@
 			"d": "",
 			"answer": "a",
 			"relatedFact": "12"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "13",
 			"question": "Which of the following is NOT an activity in Sprint Planning?",
 			"a": "Defining the sprint goal",
@@ -223,7 +272,12 @@
 			"d": "None of the above",
 			"answer": "d",
 			"relatedFact": "13"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "14",
 			"question": "Which of the following is NOT a question that Daily Scrums should answer?",
 			"a": "What have you done since yesterday?",
@@ -232,7 +286,12 @@
 			"d": "Do you have any obstacles?",
 			"answer": "b",
 			"relatedFact": "14"
+<<<<<<< HEAD
+		},
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "15",
 			"question": "Which of the following is a question that Scrum of Scrums should answer?",
 			"a": "What has your team done since we last met?",
@@ -241,7 +300,12 @@
 			"d": "All of the above",
 			"answer": "d",
 			"relatedFact": "15"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "16",
 			"question": "Refining acceptance criteria, and splitting or merging stories is called Backlog Grooming.",
 			"a": "True",
@@ -250,7 +314,12 @@
 			"d": "",
 			"answer": "a",
 			"relatedFact": "16"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "17",
 			"question": "Sprint Review answers the questions: What went well and what could be improved.",
 			"a": "True",
@@ -259,7 +328,12 @@
 			"d": "",
 			"answer": "b",
 			"relatedFact": "17"
+<<<<<<< HEAD
+		},
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "18",
 			"question": "The Sprint Retrospective answers the questions: What went well and what could be improved.",
 			"a": "True",
@@ -268,7 +342,12 @@
 			"d": "",
 			"answer": "a",
 			"relatedFact": "18"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "19",
 			"question": "How are the value of Story Points estimated?",
 			"a": "In Hours",
@@ -277,7 +356,12 @@
 			"d": "They are a universally accepted unit of measure that roughly translates to a full work day.",
 			"answer": "c",
 			"relatedFact": "19"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "20",
 			"question": "The number of story points delivered during a sprint is called the ___.",
 			"a": "Speed",
@@ -286,7 +370,12 @@
 			"d": "Velocity",
 			"answer": "d",
 			"relatedFact": "20"
+<<<<<<< HEAD
+		},
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "21",
 			"question": "What is required to complete a release plan?",
 			"a": "The team’s sprint budget, the stories in the roadmap, and the estimates for each story in the roadmap.",
@@ -295,7 +384,12 @@
 			"d": "None of the above",
 			"answer": "a",
 			"relatedFact": "21"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "22",
 			"question": "What can a Burndown chart be used to show team progress for?",
 			"a": "A sprint",
@@ -304,7 +398,12 @@
 			"d": "All of the above",
 			"answer": "d",
 			"relatedFact": "22"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "23",
 			"question": "What are some ways to make stories that are not independent more independent?",
 			"a": "By combining them with other stories",
@@ -313,7 +412,12 @@
 			"d": "None of the above",
 			"answer": "c",
 			"relatedFact": "23"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "24",
 			"question": "Testability isn’t important for any story.",
 			"a": "True",
@@ -322,7 +426,12 @@
 			"d": "",
 			"answer": "b",
 			"relatedFact": "24"
+<<<<<<< HEAD
+		}, 
+		{
+=======
 		}, {
+>>>>>>> feature/Get_Facts_Methods
 			"id": "25",
 			"question": "What is a kind of story that is used by development teams to eliminate technical uncertainty?",
 			"a": "Spike",
