@@ -40,7 +40,7 @@ public class Quiz {
 	{
 		return answer;
 	}
-	public String printOptions(){
+	public String getOptions(){
 
 		options.put("A", a);
 		options.put("B", b);

@@ -63,7 +63,7 @@ public class DialogueParser {
         //Prints quiz object by ID, gets options
         System.out.println("Question: "+response.getQuizByID(1).getQuestion());
 
-        System.out.println("Options: "+ response.getQuizByID(1).printOptions());
+        System.out.println("Options: "+ response.getQuizByID(1).getOptions());
         //Get answer
         System.out.println("Correct Answer: "+ response.getQuizByID(1).getAnswer());
 

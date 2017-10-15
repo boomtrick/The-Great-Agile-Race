@@ -18,6 +18,9 @@ public class Main {
         // ensures the minimum size is enforced.
         frame.setMinimumSize(frame.getSize());
         frame.setVisible(true);
+
+
+
     	
     }
 }

@@ -9,12 +9,19 @@ public class Fact {
 
 
 
+
 	public Fact(int id, String text)
 	{
 		this.id = id;
 		this.text = text;
 	}
 
+//
+//	//Checks if given fact was seen by player, if yes, return true
+//	public boolean wasSeenBy(Player playerIn){
+//
+//		return false;
+//	}
 
     public String getText() {
         return text;
