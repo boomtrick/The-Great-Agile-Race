@@ -1,4 +1,4 @@
-package Controllers;
+package src.Controllers;
 /**
  * 
  * created by Azamat Abdikadirov by Azamat Abdikadirov
@@ -11,10 +11,33 @@ public class Position {
 	private int row;
 	private int col;
 	
-	public Position(int row_, int col_) {
-		row=row_;
-		col=col_;
+	
+	public Position() {
+
+		row=0;
+		col=0;
 		
 	}
+	public int getRow() {
+		return row;
+	}
+
+	public void setRow(int row) {
+		this.row = row;
+	}
+
+	public int getCol() {
+		return col;
+	}
+
+	public void setCol(int col) {
+		this.col = col;
+	}
+
+	public void setPosition(int Row, int Col) {
+		row = Row;
+		col = Col;
+	}
+	
 	
 }

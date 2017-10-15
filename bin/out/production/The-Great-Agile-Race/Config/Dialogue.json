@@ -1,0 +1,28 @@
+{
+  "product": "Dialogue For The Great Agile Race",
+  "created": "10/07/2017",
+  "randomFacts":
+		[
+			{ "id": "01", "text": "Present Value is the value of an investment's future earnings in today's money." },
+			{ "id": "02", "text": "Net Present Value is the present value of an investment's earnings less the investment itself." },
+			{ "id": "03", "text": "The Software Development Iron Triangle represents how traditionally time, cost, and quality were variable while scope was immutable." },
+			{ "id": "04", "text": "Boehm's Curve is a cost curve that claims that cost increases exponentially the later on in the development lifecycle that a change is required." },
+			{ "id": "05", "text": "The Waterfall Model is a software development model characterized by gates where work in the next phase doesn't typically begin until the prior phase is complete." },
+			{ "id": "06", "text": "The Cone of Uncertainty represents the concept that the  closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software." }
+		],
+	
+	"quizzes":
+	{	"quiz": [
+					{
+					 "id":"01", 
+					 "question":"Which of the following best describes The Cone of Uncertainty?",
+					 "a":"We never know exactly what we're building until later on in a project.",
+					 "b":"A software delivery model that emphasizes iterative and incremental development.",
+					 "c":"Another name for the Waterfall model.",
+					 "d":"The closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.",
+					 "answer":"d",
+					 "relatedFact":"06"
+					}
+				]
+	}
+}

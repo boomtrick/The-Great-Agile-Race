@@ -1,0 +1,7 @@
+End of Sprint Quiz:
+Which of the following best describes the "Cone of Uncertainty?"
+Correct Answer: D
+a)We never know exactly what we're building until later on in a project.
+b)A software delivery model that emphasizes iterative and incremental development.
+c)Another name for the Waterfall model.
+d)The closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.
