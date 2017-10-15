@@ -39,19 +39,6 @@ public class DialogueParser {
 
 
 
-    //Catch error for this
-    private String getFactByID(int ID) {
-        String fact ="no fact found";
-        //While we're in the Fact array, iterate
-        for(int i=0; i < response.getFact().size(); i++){
-            //If ID in array, pull it
-            if (response.getFact().get(i).getId() == 1){
-                fact = response.getFact().get(i).getText();
-            }
-
-        }
-        return fact;
-    }
 
 
     //Samples to retrieve fields
@@ -67,8 +54,12 @@ public class DialogueParser {
         //Prints out the first question of the first quiz
         System.out.println(response.getQuiz().get(0).getQuestion().toString());
 
-        //Prints out fact by ID 1
-        System.out.println(dp.getFactByID(1));
+        //Prints out fact by ID 1, String or int
+        System.out.println(response.getFactByID("01"));
+        System.out.println(response.getFactByID(1));
+
+        //Prints quiz object by ID
+        //System.out.println(response.getQuizByID(1).getB());
 
        // System.out.println(fact);
 
