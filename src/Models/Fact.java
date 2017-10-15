@@ -1,7 +1,9 @@
 package Models;
 
 public class Fact {
-
+	/*
+        Holds getters, setters and methods for accessing Fact data
+     */
 	private int id;
 	private String text;
 

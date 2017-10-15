@@ -1,6 +1,4 @@
-import javax.swing.JFrame;
-
-import Controllers.BoardController;
+import javax.swing.*;
 
 /**
  * Created by zalmangagerman on 10/8/17.
@@ -10,7 +8,7 @@ public class Main {
         //Main file
     	
     	JFrame frame = new JFrame("The Great Agile Race");
-    	frame.add(new BoardController(7,10));
+    	//frame.add(new BoardController(7,10));
     	
     	frame.setLocationByPlatform(true);
 
