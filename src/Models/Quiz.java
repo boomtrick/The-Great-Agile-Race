@@ -21,7 +21,6 @@ public class Quiz {
 
 
 	private int relevantFact;
-	private String text;
 	private Map<String,String> options = new HashMap<String,String>();
 
 	
@@ -46,7 +45,7 @@ public class Quiz {
 	
 	public String getQuestion()
 	{
-		return text;
+		return question;
 	}
 	
 	public String getOption(String option)
