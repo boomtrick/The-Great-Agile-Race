@@ -7,4 +7,7 @@ public class BoardConstants {
     public static int MIN_TEAM_SIZE = 3;
     public static int MAX_PLAYERS = MAX_TEAM_SIZE * 2;
     public static int MIN_PLAYERS = MIN_TEAM_SIZE * 2;
+    public static int ROW_SIZE = 7;
+    public static int COL_SIZE = 10;
+    public enum Team { red, blue }
 }
