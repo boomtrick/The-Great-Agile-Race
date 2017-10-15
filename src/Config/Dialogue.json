@@ -1,7 +1,5 @@
 {
-  "product": "Dialogue For The Great Agile Race",
-  "created": "10/07/2017",
-  "randomFacts":
+  "Fact":
 		[
 			{ "id": "01", "text": "Present Value is the value of an investment's future earnings in today's money." },
 			{ "id": "02", "text": "Net Present Value is the present value of an investment's earnings less the investment itself." },
@@ -30,8 +28,7 @@
 			{ "id": "25", "text": "A spike is a kind of story that is used by development teams to eliminate technical uncertainty."},
 		],
 	
-	"quizzes":
-	{	"quiz": [
+	"Quiz": [
 					{
 					 "id":"01", 
 					 "question":"Which of the following best describes Present Value?",
@@ -286,5 +283,5 @@
 					}
 
 				]
-	}
+	
 }
