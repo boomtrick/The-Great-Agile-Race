@@ -1,9 +1,12 @@
 package Models;
 
 public class Fact {
-
+	/*
+        Holds getters, setters and methods for accessing Fact data
+     */
 	private int id;
 	private String text;
+
 
 
 
@@ -13,6 +16,12 @@ public class Fact {
 		this.text = text;
 	}
 
+//
+//	//Checks if given fact was seen by player, if yes, return true
+//	public boolean wasSeenBy(Player playerIn){
+//
+//		return false;
+//	}
 
     public String getText() {
         return text;

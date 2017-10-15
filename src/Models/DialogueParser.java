@@ -51,6 +51,8 @@ public class DialogueParser {
         System.out.println(response.getFact().get(0).getText());
         //Prints out the first fact id
         System.out.println(response.getFact().get(0).getId());
+
+
         //Prints out the first question of the first quiz
         System.out.println(response.getQuiz().get(0).getQuestion().toString());
 
@@ -58,8 +60,16 @@ public class DialogueParser {
         System.out.println(response.getFactByID("01"));
         System.out.println(response.getFactByID(1));
 
-        //Prints quiz object by ID
-        //System.out.println(response.getQuizByID(1).getB());
+        //Prints quiz object by ID, gets options
+        System.out.println("Question: "+response.getQuizByID(1).getQuestion());
+
+        System.out.println("Options: "+ response.getQuizByID(1).getOptions());
+        //Get answer
+        System.out.println("Correct Answer: "+ response.getQuizByID(1).getAnswer());
+
+        //Checks if answer is correct or not
+        System.out.println("Answering 'a'... "+ response.getQuizByID(1).isCorrect("a"));
+        System.out.println("Answering 'b'... "+ response.getQuizByID(1).isCorrect("b"));
 
        // System.out.println(fact);
 
