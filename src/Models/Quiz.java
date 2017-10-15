@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,26 +18,17 @@ public class Quiz {
 	private String answer;
 	private int relatedFact;
 
-
-
-
-	private int relevantFact;
 	private Map<String,String> options = new HashMap<String,String>();
 
 	
-//	public Quiz(int id, String question, String a, String b, String c, String d, String answer, int factId)
-//	{
-//		this.id = id;
-//		this.text = text;
-//
-//		options.put("A", a);
-//		options.put("B", b);
-//		options.put("C", c);
-//		options.put("D", d);
-//
-//		this.answer = answer;
-//		relevantFact = factId;
-//	}
+	public Quiz(String a, String b, String c, String d)
+	{
+
+		options.put("A", a);
+		options.put("B", b);
+		options.put("C", c);
+		options.put("D", d);
+	}
 	
 	public int getId()
 	{
@@ -57,7 +49,11 @@ public class Quiz {
 	{
 		return answer;
 	}
-	
+
+	public String printOptions(){
+
+	    return Arrays.toString(options.entrySet().toArray());
+    }
 	public int getRelatedFact()
 	{
 		return relatedFact;
@@ -111,8 +107,5 @@ public class Quiz {
 		return d;
 	}
 
-	public int getRelevantFact() {
-		return relevantFact;
-	}
 
 }

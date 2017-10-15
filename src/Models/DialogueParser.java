@@ -1,21 +1,25 @@
-package Controllers;
+package Models;
 
-import Models.Response;
 import com.google.gson.Gson;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
 
+/*Parses a JSON file indicated by filePath
+* Returns response for manipulation */
+
 public class DialogueParser {
 
     private Response response;
     private String filePath = "src/Config/Dialogue.json";
 
+
     public DialogueParser(){
         readInResponse(filePath);
     }
 
+    //Use this to get the fields you want
     public Response getResponse() {
         return response;
     }
@@ -33,7 +37,7 @@ public class DialogueParser {
     }
 
 
-    //Test Sample
+    //Samples to retrieve fields
     public static void main(String[] args)
     {
         DialogueParser dp = new DialogueParser();
@@ -43,6 +47,10 @@ public class DialogueParser {
         System.out.println(response.getFact().get(0).getText());
         //Prints out the first question of the first quiz
         System.out.println(response.getQuiz().get(0).getQuestion().toString());
+
+
+
+        System.out.println(response.getQuiz().get(0).printOptions());
 
 
 
