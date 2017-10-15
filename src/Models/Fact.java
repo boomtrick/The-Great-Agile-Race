@@ -14,17 +14,12 @@ public class Fact {
 	}
 
 
-
     public String getText() {
         return text;
     }
 	public int getId()
 	{
 		return id;
-	}
-	public String getFact()
-	{
-		return text;
 	}
 	public void setId(int id) {
 		this.id = id;
