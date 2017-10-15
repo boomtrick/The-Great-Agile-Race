@@ -1,7 +1,5 @@
 {
-  "product": "Dialogue For The Great Agile Race",
-  "created": "10/07/2017",
-  "randomFacts":
+  "Fact":
 		[
 			{ "id": "01", "text": "Present Value is the value of an investment's future earnings in today's money." },
 			{ "id": "02", "text": "Net Present Value is the present value of an investment's earnings less the investment itself." },
@@ -11,8 +9,7 @@
 			{ "id": "06", "text": "The Cone of Uncertainty represents the concept that the  closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software." }
 		],
 	
-	"quizzes":
-	{	"quiz": [
+	"Quiz": [
 					{
 					 "id":"01", 
 					 "question":"Which of the following best describes The Cone of Uncertainty?",
@@ -24,5 +21,5 @@
 					 "relatedFact":"06"
 					}
 				]
-	}
+	
 }
