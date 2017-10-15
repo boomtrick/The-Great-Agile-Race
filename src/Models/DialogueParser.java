@@ -67,7 +67,8 @@ public class DialogueParser {
         //Prints out the first question of the first quiz
         System.out.println(response.getQuiz().get(0).getQuestion().toString());
 
-        getFactByID(1);
+        //Prints out fact by ID 1
+        System.out.println(dp.getFactByID(1));
 
        // System.out.println(fact);
 
