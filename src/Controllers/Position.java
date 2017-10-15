@@ -1,4 +1,4 @@
-package Controllers;
+package src.Controllers;
 /**
  * 
  * created by Azamat Abdikadirov by Azamat Abdikadirov
@@ -8,14 +8,14 @@ package Controllers;
  */
 public class Position {
 
-	private int row=0;
-	private int col=0;
+	private int row;
+	private int col;
 	
 	
-	public Position(int row_, int col_) {
+	public Position() {
 
-		row=row_;
-		col=col_;
+		row=0;
+		col=0;
 		
 	}
 	public int getRow() {
