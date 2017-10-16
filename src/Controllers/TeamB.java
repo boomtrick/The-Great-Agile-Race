@@ -17,7 +17,7 @@ public class TeamB extends PlayerAbsract {
 	}
 	public static ArrayList <PlayerI> makeTeam (int numOfPlayersInTeam){
 		 ArrayList <PlayerI> playerList=new ArrayList<PlayerI>();
-		String name;
+		String name ;
 		Image img;
 		int id;
 		PlayerI player;
@@ -26,8 +26,8 @@ public class TeamB extends PlayerAbsract {
 			//name = ... //need to pass name from interface
 			//img=...    // need to path name to piece file 
 			id=i;
-			player = new TeamA(name,img, id);
-			playerList.add(player);
+			//player = new TeamA(name,img, id);
+			//playerList.add(player);
 			
 		}
 		return playerList;

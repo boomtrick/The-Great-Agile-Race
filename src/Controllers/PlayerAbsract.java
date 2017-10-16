@@ -30,6 +30,16 @@ public class PlayerAbsract implements PlayerI  {
 		
 	}
 
+	@Override
+	public String getId() {
+		return null;
+	}
+
+	@Override
+	public String getTeam() {
+		return null;
+	}
+
 
 	public String getPlayerName() {
 		return playerName;

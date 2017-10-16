@@ -3,7 +3,6 @@ package Controllers;
 /**
  * Created by zalmangagerman on 10/15/17.
  */
-import static Config.BoardConstants.Team.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +37,9 @@ public class TileController implements TileI {
 
     @Override
     public void insertPlayer(PlayerI newPlayer) {
-        if (newPlayer.getTeam() == red) {
-            players_.add(newPlayer);
-        } //TOdo streamline
+//        if (newPlayer.getTeam() == red) {
+//            players_.add(newPlayer);
+//        } //TOdo streamline
         System.out.println(newPlayer.getId() + " added to tile <" + row_ + ", " + col_ + ">");
     }
 
