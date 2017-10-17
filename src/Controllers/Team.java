@@ -9,13 +9,13 @@ import java.util.ArrayList;
  *I provided two seperate identical classes for Team A and Team B, so that there is clear seperation between teams
  *
  */
-public class TeamA extends PlayerAbsract{
+public class Team extends PlayerAbsract{
 
 	public TeamA(String name, Image image, int id) {
 		super(name, image, id);
 		
 	}
-	@SuppressWarnings("hiding")
+
 	public static ArrayList <PlayerI> makeTeam (int numOfPlayersInTeam){
 		/**
 		 * the methods creates ArrayList of player objects 
