@@ -9,24 +9,20 @@ import java.util.ArrayList;
  *I provided two seperate identical classes for Team A and Team B, so that there is clear seperation between teams
  *
  */
-public class TeamA extends PlayerAbsract{
+public class TeamB extends PlayerAbsract {
 
-	public TeamA(String name, Image image, int id) {
+	public TeamB(String name, Image image, int id) {
 		super(name, image, id);
-		
+		// TODO Auto-generated constructor stub
 	}
-	@SuppressWarnings("hiding")
 	public static ArrayList <PlayerI> makeTeam (int numOfPlayersInTeam){
-		/**
-		 * the methods creates ArrayList of player objects 
-		 */
 		 ArrayList <PlayerI> playerList=new ArrayList<PlayerI>();
-		String name;
+		String name ;
 		Image img;
 		int id;
 		PlayerI player;
 		for (int i=1; i<numOfPlayersInTeam;) {
-			//TODO
+			//TODO 
 			//name = ... //need to pass name from interface
 			//img=...    // need to path name to piece file 
 			id=i;
@@ -37,4 +33,5 @@ public class TeamA extends PlayerAbsract{
 		return playerList;
 	}
 
+	
 }

@@ -29,6 +29,16 @@ public abstract class PlayerAbsract implements PlayerI  {
 		playerPosition.setPosition(i, j);
 	}
 
+	@Override
+	public String getId() {
+		return null;
+	}
+
+	@Override
+	public String getTeam() {
+		return null;
+	}
+
 
 	public String getPlayerName() {
 		return playerName;
