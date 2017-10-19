@@ -9,5 +9,7 @@ public class BoardConstants {
     final public static int MIN_PLAYERS = MIN_TEAM_SIZE * 2;
     final public static int ROW_SIZE = 7;
     final public static int COL_SIZE = 10;
-    public enum Team { red, blue }
+    public enum Team {RED, BLUE}
+    final public static int BLUE_IND = 0;
+    final public static int RED_IND = 1;
 }

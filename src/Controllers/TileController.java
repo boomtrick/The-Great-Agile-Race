@@ -37,7 +37,7 @@ public class TileController implements TileI {
 
     @Override
     public void insertPlayer(PlayerI newPlayer) {
-//        if (newPlayer.getTeam() == red) {
+//        if (newPlayer.getTeam() == RED) {
 //            players_.add(newPlayer);
 //        } //TOdo streamline
         System.out.println(newPlayer.getId() + " added to tile <" + row_ + ", " + col_ + ">");
@@ -65,5 +65,13 @@ public class TileController implements TileI {
             }
         }
         return false;
+    }
+
+    public int getNumberByTeam(Config.BoardConstants.Team team) {
+        int ret = 0;
+        for (PlayerI player : players_) {
+            if (player.getTeam() == team) { ret++; }
+        }
+        return ret;
     }
 }

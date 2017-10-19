@@ -13,10 +13,9 @@ import java.awt.Graphics;
 /**
  * TileController can hold a drawable object. i.e piece and draws it on the board if it exists
  */
-public class Tile extends JPanel{
+public class Tile extends JPanel {
 
 	private IDrawable drawable;
-
 
 	public Tile()
 	{

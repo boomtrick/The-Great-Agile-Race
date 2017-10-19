@@ -11,7 +11,7 @@ import Config.BoardConstants.Team;
 public interface PlayerI {
     void move(int i, int j);
     String getId();
-    Team getTeam();
+    Config.BoardConstants.Team getTeam();
     String getPlayerName();
     void setPlayerName(String playerName);
     Image getPlayerPiece();
