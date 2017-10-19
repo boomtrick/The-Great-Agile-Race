@@ -1,4 +1,4 @@
-package src.Controllers;
+package Controllers;
 /**
  * 
  * created by Azamat Abdikadirov by Azamat Abdikadirov

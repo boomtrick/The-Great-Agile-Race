@@ -10,7 +10,7 @@ import java.awt.Image;
  *
  */
 
-public class PlayerAbsract implements PlayerI  {
+public abstract class PlayerAbsract implements PlayerI  {
 	private String playerName; 
 	private Image playerPiece;
 	private int playerID;
@@ -27,7 +27,16 @@ public class PlayerAbsract implements PlayerI  {
 	@Override
 	public void move(int i, int j) {
 		playerPosition.setPosition(i, j);
-		
+	}
+
+	@Override
+	public String getId() {
+		return null;
+	}
+
+	@Override
+	public String getTeam() {
+		return null;
 	}
 
 

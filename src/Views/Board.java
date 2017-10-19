@@ -1,4 +1,4 @@
-package Controllers;
+package Views;
 /**
  * Created by zalmangagerman on 10/8/17.
  */
