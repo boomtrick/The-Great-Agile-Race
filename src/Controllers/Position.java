@@ -13,7 +13,10 @@ public class Position {
 	
 	
 	public Position() {
-
+		/**
+		 * When object is created, its position is set to 0,0 before rolling dice. Therefore, it can not be seen before rolling dice
+		 */
+		 
 		row=0;
 		col=0;
 		
