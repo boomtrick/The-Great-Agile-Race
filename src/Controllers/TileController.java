@@ -3,24 +3,54 @@ package Controllers;
 /**
  * Created by zalmangagerman on 10/15/17.
  */
+import Models.Fact;
+import Models.Quiz;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TileController implements TileI {
     private final int row_;
     private final int col_;
-    private List<PlayerI> players_;
+    private final Fact fact_;
+    private final Quiz quiz_;
+    private final List<PlayerI> players_;
+
 
     public TileController(int row, int col) {
-        players_ = new ArrayList<>();
-        row_ = row;
-        col_ = col;
+        this(row, col, new Fact(), new Quiz());
+    }
+
+    public TileController(int row, int col, List<PlayerI> players) {
+        this(row, col, new Fact(), new Quiz(), players);
+    }
+
+    public TileController(int row, int col, Fact fact) {
+        this(row, col, fact, new Quiz());
+    }
+
+    public TileController(int row, int col, Fact fact, List<PlayerI> players) {
+        this(row, col, fact, new Quiz(), players);
+    }
+
+    public TileController(int row, int col, Quiz quiz) {
+        this(row, col, new Fact(), quiz);
+    }
+
+    public TileController(int row, int col, Quiz quiz, List<PlayerI> players) {
+        this(row, col, new Fact(), quiz, players);
+    }
+
+    private TileController(int row, int col, Fact fact, Quiz quiz) {
+        this(row, col, fact, quiz, new ArrayList<>());
     }
 
 
-    public TileController(int row, int col, List<PlayerI> players) {
+    private TileController(int row, int col, Fact fact, Quiz quiz, List<PlayerI> players) {
         row_ = row;
         col_ = col;
+        fact_ = fact;
+        quiz_ = quiz;
         players_ = players;
     }
 

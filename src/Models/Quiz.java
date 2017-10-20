@@ -22,6 +22,7 @@ public class Quiz {
 	
 	public Quiz()
 	{
+		//There should be such a thing as an empty Quiz //todo
 	}
 
 	//Checks if answer is correct, returns true or false

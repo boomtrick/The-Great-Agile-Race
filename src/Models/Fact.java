@@ -16,6 +16,10 @@ public class Fact {
 		this.text = text;
 	}
 
+	public Fact() {
+		//There should be such a thing as an empty fact // todo
+	}
+
 //
 //	//Checks if given fact was seen by player, if yes, return true
 //	public boolean wasSeenBy(Player playerIn){
