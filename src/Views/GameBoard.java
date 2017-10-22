@@ -2,14 +2,16 @@ package Views;
 
 import Controllers.TileController;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
-import static Config.BoardConstants.COL_SIZE;
-import static Config.BoardConstants.ROW_SIZE;
 import static Config.BoardConstants.Team.BLUE;
 import static Config.BoardConstants.Team.RED;
 
@@ -19,7 +21,6 @@ public class GameBoard {
     private JButton[][] tilePanels_;
     private JPanel raceBoard_;
     private JPanel boardPanel;
-    private JLabel lblBoardImage;
     private final JLabel message = new JLabel(
             "Let's Agile RACE!");
     private static final String[] COL_LABELS = new String[] { "Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday" };
@@ -145,11 +146,24 @@ public class GameBoard {
 
             @Override
             public void run() {
-                GameBoard cb =
-                        new GameBoard(ROW_SIZE, COL_SIZE);
+//                GameBoard cb =
+//                        new GameBoard(ROW_SIZE, COL_SIZE);
 
                 JFrame f = new JFrame("Let's place the Great Agile Race!");
-                f.add(cb.getGui());
+                BufferedImage img = null;
+                try {
+                    img = ImageIO.read(new File("C:\\temp\\board-img.png"));
+                    System.out.println("image found");
+                } catch (IOException e) {
+                    System.out.println("No image found");
+                }
+
+                BackgroundPanel t = new BackgroundPanel(img);
+                t.setTransparentAdd(false);
+                f.setContentPane(t);
+                //f.add(cb.getGui());
+
+                f.setResizable(false);
                 f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 f.setLocationByPlatform(true);
 
@@ -159,6 +173,11 @@ public class GameBoard {
                 // ensures the minimum size is enforced.
                 f.setMinimumSize(f.getSize());
                 f.setVisible(true);
+
+
+                //frame.setContentPane(new GameBoard().boardPanel);
+                //Disabling ability to resize the form
+
             }
         };
         SwingUtilities.invokeLater(r);
