@@ -49,9 +49,9 @@ public class TileController implements TileI {
     @Override
     public void deletePlayer(PlayerI player) {
         int origSize = players_.size();
-        String id = player.getId();
+        int id = player.getId();
         for (PlayerI thisPlayer : players_) {
-            if (id.equals(thisPlayer.getId())) {
+            if (id == thisPlayer.getId()) {
                 players_.remove(player);
                 System.out.println(id + " deleted from tile <" + row_ + ", " + col_ + ">");
             }
@@ -64,7 +64,7 @@ public class TileController implements TileI {
     @Override
     public boolean has(PlayerI player) {
         for (PlayerI curPlayer : players_) {
-            if (curPlayer.getId().equals(player.getId())) {
+            if (curPlayer.getId() == player.getId()) {
                 return true;
             }
         }

@@ -2,13 +2,8 @@ package Views;
 
 import Controllers.IDrawable;
 
-import javax.swing.BorderFactory;
-import javax.swing.JPanel;
-import javax.swing.border.LineBorder;
-
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * TileController can hold a drawable object. i.e piece and draws it on the board if it exists

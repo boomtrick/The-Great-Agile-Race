@@ -1,17 +1,16 @@
 package Controllers;
+
 /**
  * Created by zalmangagerman on 10/8/17.
  * 
  */
-import java.awt.Image;
-
-import Config.BoardConstants;
-import Controllers.Position;
 import Config.BoardConstants.Team;
+
+import java.awt.*;
 public interface PlayerI {
     void move(int i, int j);
-    String getId();
-    Config.BoardConstants.Team getTeam();
+    int getId();
+    Team getTeam();
     String getPlayerName();
     void setPlayerName(String playerName);
     Image getPlayerPiece();
