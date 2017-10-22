@@ -1,13 +1,13 @@
-package Views;
+package src.Views;
 
-import Controllers.TileController;
+import src.Controllers.TileController;
 
 import java.awt.*;
 import javax.swing.*;
         import javax.swing.border.*;
 
-import static Config.BoardConstants.*;
-import static Config.BoardConstants.Team.*;
+import static src.Config.BoardConstants.*;
+import static src.Config.BoardConstants.Team.*;
 
 public class GameBoard {
 

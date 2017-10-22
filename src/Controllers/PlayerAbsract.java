@@ -1,6 +1,7 @@
-package Controllers;
+package src.Controllers;
 
 import java.awt.Image;
+import src.Config.BoardConstants.Team;
 /**
  * 
  * @author Azamat
@@ -15,10 +16,12 @@ public abstract class PlayerAbsract implements PlayerI  {
 	private Image playerPiece;
 	private int playerID;
 	private Position playerPosition;
-	public PlayerAbsract(String name, Image image, int id) {
+	private Team side;
+	public PlayerAbsract(String name, Image image, int id, Team team) {
 		playerName=name;
 		playerPiece=image;
 		playerID=id;
+		side=team;
 		playerPosition=new Position();
 		
 	}
@@ -30,13 +33,13 @@ public abstract class PlayerAbsract implements PlayerI  {
 	}
 
 	@Override
-	public String getId() {
-		return null;
+	public int getId() {
+		return playerID;
 	}
 
 	@Override
-	public String getTeam() {
-		return null;
+	public Team getTeam() {
+		return side;
 	}
 
 

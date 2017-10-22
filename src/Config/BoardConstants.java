@@ -1,4 +1,4 @@
-package Config;
+package src.Config;
 /**
  * Created by zalmangagerman on 10/8/17.
  */
