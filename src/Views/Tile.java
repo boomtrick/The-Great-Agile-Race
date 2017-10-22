@@ -1,6 +1,6 @@
-package Views;
+package src.Views;
 
-import Controllers.IDrawable;
+import src.Controllers.IDrawable;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
