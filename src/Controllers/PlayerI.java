@@ -1,13 +1,12 @@
-package src.Controllers;
+package Controllers;
+
 /**
  * Created by zalmangagerman on 10/8/17.
  * 
  */
-import java.awt.Image;
+import Config.BoardConstants.Team;
 
-import src.Config.BoardConstants;
-import src.Controllers.Position;
-import src.Config.BoardConstants.Team;
+import java.awt.*;
 public interface PlayerI {
     void move(int i, int j);
     int getId();

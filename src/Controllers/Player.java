@@ -1,8 +1,8 @@
-package src.Controllers;
+package Controllers;
 
-import java.awt.Image;
+import Config.BoardConstants.Team;
 
-import src.Config.BoardConstants.Team;
+import java.awt.*;
 
 public class Player extends PlayerAbsract {
 

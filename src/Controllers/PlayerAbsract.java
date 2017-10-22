@@ -1,7 +1,8 @@
-package src.Controllers;
+package Controllers;
 
-import java.awt.Image;
-import src.Config.BoardConstants.Team;
+import Config.BoardConstants.Team;
+
+import java.awt.*;
 /**
  * 
  * @author Azamat

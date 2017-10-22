@@ -1,19 +1,25 @@
-package src.Views;
+package Views;
 
-import src.Controllers.TileController;
+import Controllers.TileController;
 
-import java.awt.*;
 import javax.swing.*;
-        import javax.swing.border.*;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import java.awt.*;
 
-import static src.Config.BoardConstants.*;
-import static src.Config.BoardConstants.Team.*;
+import static Config.BoardConstants.COL_SIZE;
+import static Config.BoardConstants.ROW_SIZE;
+import static Config.BoardConstants.Team.BLUE;
+import static Config.BoardConstants.Team.RED;
 
 public class GameBoard {
 
     private final JPanel gui = new JPanel(new BorderLayout(3, 3));
     private JButton[][] tilePanels_;
     private JPanel raceBoard_;
+    private JPanel boardPanel;
+    private JLabel lblBoardImage;
     private final JLabel message = new JLabel(
             "Let's Agile RACE!");
     private static final String[] COL_LABELS = new String[] { "Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday" };

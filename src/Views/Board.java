@@ -5,6 +5,7 @@ package Views;
 
 import java.awt.*;
 import javax.swing.JPanel;
+import Views.Tile;
 
 public class Board extends JPanel {
 	private Tile[][] tiles;

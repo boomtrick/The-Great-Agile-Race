@@ -7,7 +7,7 @@ public interface TileI {
     int getRow();
     int getCol();
     void insertPlayer(PlayerI player);
-    void deletePlayerById(String id) throws PlayerNotFoundException;
+    void deletePlayerById(int id) throws PlayerNotFoundException;
     boolean has(PlayerI player);
 
 }
