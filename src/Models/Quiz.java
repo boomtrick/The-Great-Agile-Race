@@ -6,7 +6,7 @@ import java.util.Map;
 /*
     Holds getters, setters and methods for accessing Quiz data
  */
-public class Quiz {
+public class Quiz implements SpecialEvent {
 
 	private int id;
 	private String question;

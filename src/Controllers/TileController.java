@@ -12,46 +12,19 @@ import java.util.List;
 public class TileController implements TileI {
     private final int row_;
     private final int col_;
-    private final Fact fact_;
-    private final Quiz quiz_;
     private final List<PlayerI> players_;
+    private final boolean event_;
 
 
-    public TileController(int row, int col) {
-        this(row, col, new Fact(), new Quiz());
+    public TileController(int row, int col, boolean event) {
+        this(row, col, new ArrayList<PlayerI>(), event);
     }
 
-    public TileController(int row, int col, List<PlayerI> players) {
-        this(row, col, new Fact(), new Quiz(), players);
-    }
-
-    public TileController(int row, int col, Fact fact) {
-        this(row, col, fact, new Quiz());
-    }
-
-    public TileController(int row, int col, Fact fact, List<PlayerI> players) {
-        this(row, col, fact, new Quiz(), players);
-    }
-
-    public TileController(int row, int col, Quiz quiz) {
-        this(row, col, new Fact(), quiz);
-    }
-
-    public TileController(int row, int col, Quiz quiz, List<PlayerI> players) {
-        this(row, col, new Fact(), quiz, players);
-    }
-
-    private TileController(int row, int col, Fact fact, Quiz quiz) {
-        this(row, col, fact, quiz, new ArrayList<>());
-    }
-
-
-    private TileController(int row, int col, Fact fact, Quiz quiz, List<PlayerI> players) {
+    public TileController(int row, int col, List<PlayerI> players, boolean event) {
         row_ = row;
         col_ = col;
-        fact_ = fact;
-        quiz_ = quiz;
         players_ = players;
+        event_ = event;
     }
 
     @Override
@@ -74,10 +47,11 @@ public class TileController implements TileI {
     }
 
     @Override
-    public void deletePlayerById(String id) {
+    public void deletePlayer(PlayerI player) {
         int origSize = players_.size();
-        for (PlayerI player : players_) {
-            if (player.getId().equals(id)) {
+        String id = player.getId();
+        for (PlayerI thisPlayer : players_) {
+            if (id.equals(thisPlayer.getId())) {
                 players_.remove(player);
                 System.out.println(id + " deleted from tile <" + row_ + ", " + col_ + ">");
             }
@@ -103,5 +77,9 @@ public class TileController implements TileI {
             if (player.getTeam() == team) { ret++; }
         }
         return ret;
+    }
+
+    public boolean hasEvent() {
+        return event_;
     }
 }

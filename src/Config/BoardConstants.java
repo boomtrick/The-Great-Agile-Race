@@ -12,4 +12,24 @@ public class BoardConstants {
     public enum Team {RED, BLUE}
     final public static int BLUE_IND = 0;
     final public static int RED_IND = 1;
+    public final static boolean[][] spEvSpaces = new boolean[][]
+            {       {false, false, true, false, false, true, false},
+
+                    {false, true, false, false, false, false, false},
+
+                    {false, false, false, false, false, false, false},
+
+                    {false, false, true, true, false, false, false},
+
+                    {false, false, false, false, false, false, true},
+
+                    {false, true, false, false, false, false, false},
+
+                    {false, false, true, false, false, false, false},
+
+                    {false, false, false, true, false, false, false},
+
+                    {true, false, false, false, true, false, false},
+
+                    {true, false, false, true, true, false, true}, };
 }

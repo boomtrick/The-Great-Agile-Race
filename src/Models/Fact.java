@@ -1,6 +1,6 @@
 package Models;
 
-public class Fact {
+public class Fact implements SpecialEvent {
 	/*
         Holds getters, setters and methods for accessing Fact data
      */
