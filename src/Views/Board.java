@@ -15,9 +15,11 @@ public class Board extends JPanel {
 	public Board(int rows, int cols)
 	{
 		setLayout(new GridLayout(rows,cols));
+
 		this.rows = rows;
 		this.cols = cols;
 		tiles = new Tile[rows][cols];
+		this.setOpaque(false);
 		populateBoard();
 	}
 

@@ -152,7 +152,7 @@ public class GameBoard {
                 JFrame f = new JFrame("Let's place the Great Agile Race!");
                 BufferedImage img = null;
                 try {
-                    img = ImageIO.read(new File("C:\\temp\\board-img.png"));
+                    img = ImageIO.read(new File("/The-Great-Agile-Race/src/Views/Images/board.png"));
                     System.out.println("image found");
                 } catch (IOException e) {
                     System.out.println("No image found");

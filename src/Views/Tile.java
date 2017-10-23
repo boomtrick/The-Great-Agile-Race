@@ -14,8 +14,9 @@ public class Tile extends JPanel {
 
 	public Tile()
 	{
+		this.setOpaque(false);
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK) );
-		this.setPreferredSize(new Dimension(100,100) );
+		this.setPreferredSize(new Dimension(50,50) );
 	}
 	
 	public Tile(IDrawable drawable) {
