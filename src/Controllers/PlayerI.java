@@ -4,13 +4,13 @@ package Controllers;
  * Created by zalmangagerman on 10/8/17.
  * 
  */
-import Config.BoardConstants.Team;
+import Config.BoardConstants.TeamColor;
 
 import java.awt.*;
 public interface PlayerI {
     void move(int i, int j);
     int getId();
-    Team getTeam();
+    TeamColor getTeam();
     String getPlayerName();
     void setPlayerName(String playerName);
     Image getPlayerPiece();

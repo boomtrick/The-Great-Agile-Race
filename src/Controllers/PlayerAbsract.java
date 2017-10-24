@@ -1,6 +1,6 @@
 package Controllers;
 
-import Config.BoardConstants.Team;
+import Config.BoardConstants.TeamColor;
 
 import java.awt.*;
 /**
@@ -17,8 +17,8 @@ public abstract class PlayerAbsract implements PlayerI  {
 	private Image playerPiece;
 	private int playerID;
 	private Position playerPosition;
-	private Team side;
-	public PlayerAbsract(String name, Image image, int id, Team team) {
+	private TeamColor side;
+	public PlayerAbsract(String name, Image image, int id, TeamColor team) {
 		playerName=name;
 		playerPiece=image;
 		playerID=id;
@@ -39,7 +39,7 @@ public abstract class PlayerAbsract implements PlayerI  {
 	}
 
 	@Override
-	public Team getTeam() {
+	public TeamColor getTeam() {
 		return side;
 	}
 

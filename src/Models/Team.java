@@ -1,28 +1,47 @@
 package Models;
 
+import Config.BoardConstants.TeamColor;
+import Controllers.PlayerI;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class Team {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Team implements TeamI {
 
     /*
     Holds getters, setters and methods for accessing Fact data
  */
-    private String color;
+    private final TeamColor color_;
+    private List<PlayerI> players_;
 
-    //private List<Player> players;
-
-    public String getColor() {
-        return color;
+    public Team(TeamColor color) {
+        this(color, new ArrayList<PlayerI>());
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public Team(TeamColor color, List<PlayerI> players) {
+        color_ = color;
+        players_ = players;
     }
 
-//    public List<Player> getPlayers() {
-//        return players;
-//    }
-//
-//    public void setPlayers(List<Player> players) {
-//        this.players = players;
-//    }
+    @Override
+    public TeamColor getColor() {
+        return color_;
+    }
+
+    @Override
+    public List<PlayerI> getPlayers() {
+        throw new NotImplementedException();
+    }
+
+    @Override
+    public void setPlayers(List<PlayerI> players) {
+        throw new NotImplementedException();
+        //this.players_ = players;
+    }
+
+    @Override
+    public void addPlayer(PlayerI player) {
+        players_.add(player);
+    }
 }

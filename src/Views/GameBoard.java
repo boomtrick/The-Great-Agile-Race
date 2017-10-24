@@ -12,8 +12,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import static Config.BoardConstants.Team.BLUE;
-import static Config.BoardConstants.Team.RED;
+import static Config.BoardConstants.TeamColor.BLUE;
+import static Config.BoardConstants.TeamColor.RED;
 
 public class GameBoard {
 

@@ -3,8 +3,7 @@ package Controllers;
 /**
  * Created by zalmangagerman on 10/15/17.
  */
-import Models.Fact;
-import Models.Quiz;
+import Config.BoardConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +70,7 @@ public class TileController implements TileI {
         return false;
     }
 
-    public int getNumberByTeam(Config.BoardConstants.Team team) {
+    public int getNumberByTeam(BoardConstants.TeamColor team) {
         int ret = 0;
         for (PlayerI player : players_) {
             if (player.getTeam() == team) { ret++; }
@@ -79,6 +78,7 @@ public class TileController implements TileI {
         return ret;
     }
 
+    @Override
     public boolean hasEvent() {
         return event_;
     }
