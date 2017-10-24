@@ -3,9 +3,8 @@ package Views;
  * Created by zalmangagerman on 10/8/17.
  */
 
+import javax.swing.*;
 import java.awt.*;
-import javax.swing.JPanel;
-import Views.Tile;
 
 public class Board extends JPanel {
 	private Tile[][] tiles;
@@ -34,4 +33,7 @@ public class Board extends JPanel {
 			}
 		}
 	}
+
+
+
 }

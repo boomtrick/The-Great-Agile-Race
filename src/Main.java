@@ -30,7 +30,6 @@ public class Main {
          t.setTransparentAdd(false);
          frame.setContentPane(t);
     	frame.add(board);
-    	
     	frame.setLocationByPlatform(true);
 
         // ensures the frame is the minimum size it needs to be
@@ -40,8 +39,12 @@ public class Main {
 
         frame.setMinimumSize(board.getPreferredSize());
         //frame.setResizable(false);
+
         frame.setVisible(true);
 
+
+//        Dialogue dialogue = new Dialogue();
+//        dialogue.StartPopup(frame);
 
 
     	
