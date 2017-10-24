@@ -1,11 +1,11 @@
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import Views.BackgroundPanel;
+import Views.Board;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
-import Views.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by zalmangagerman on 10/8/17.
@@ -18,7 +18,8 @@ public class Main {
     	JPanel board = new Board(10,7);
     	 BufferedImage img = null;
          try {
-             img = ImageIO.read(new File("C:\\Users\\Mark\\Documents\\The-Great-Agile-Race\\src\\Views\\Images\\board.png"));
+            // img = ImageIO.read(new File("C:\\Users\\Mark\\Documents\\The-Great-Agile-Race\\src\\Views\\Images\\board.png"));
+             img = ImageIO.read(new File("src\\Views\\Images\\board.png"));
              System.out.println("image found");
          } catch (IOException e) {
              System.out.println("No image found");
@@ -38,6 +39,7 @@ public class Main {
         // ensures the minimum size is enforced.
 
         frame.setMinimumSize(board.getPreferredSize());
+        //frame.setResizable(false);
         frame.setVisible(true);
 
 
