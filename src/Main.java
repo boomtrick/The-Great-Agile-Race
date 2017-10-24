@@ -39,6 +39,7 @@ public class Main {
         // ensures the minimum size is enforced.
 
         frame.setMinimumSize(board.getPreferredSize());
+        //frame.setResizable(false);
         frame.setVisible(true);
 
 
