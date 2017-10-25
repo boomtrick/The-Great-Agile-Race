@@ -24,6 +24,9 @@ public class TileController implements TileI {
         col_ = col;
         players_ = players;
         event_ = event;
+        assert row_ >= 0;
+        assert col_ >= 0;
+        assert players_ != null;
     }
 
     @Override

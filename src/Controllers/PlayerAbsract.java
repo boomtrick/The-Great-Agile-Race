@@ -13,20 +13,19 @@ import java.awt.*;
  */
 
 public abstract class PlayerAbsract implements PlayerI  {
-	private String playerName; 
-	private Image playerPiece;
-	private int playerID;
-	private Position playerPosition;
-	private TeamColor side;
+	private final String playerName;
+	private final Image playerPiece;
+	private final int playerID;
+	private PositionI playerPosition;
+	private final TeamColor side;
+
 	public PlayerAbsract(String name, Image image, int id, TeamColor team) {
 		playerName=name;
 		playerPiece=image;
 		playerID=id;
 		side=team;
-		playerPosition=new Position();
-		
+		playerPosition= startingPosition();
 	}
-	
 
 	@Override
 	public void move(int i, int j) {
@@ -43,44 +42,33 @@ public abstract class PlayerAbsract implements PlayerI  {
 		return side;
 	}
 
-
+	@Override
 	public String getPlayerName() {
 		return playerName;
 	}
 
-
-	public void setPlayerName(String playerName) {
-		this.playerName = playerName;
-	}
-
-
+	@Override
 	public Image getPlayerPiece() {
 		return playerPiece;
 	}
 
-
-	public void setPlayerPiece(Image playerPiece) {
-		this.playerPiece = playerPiece;
-	}
-
-
+	@Override
 	public int getPlayerID() {
 		return playerID;
 	}
 
-
-	public void setPlayerID(int playerID) {
-		this.playerID = playerID;
-	}
-
-
-	public Position getPlayerPosition() {
+	@Override
+	public PositionI getPlayerPosition() {
 		return playerPosition;
 	}
 
-
+	@Override
 	public void setPlayerPosition(Position playerPosition) {
 		this.playerPosition = playerPosition;
 	}
+
+    public static PositionI startingPosition() {
+        return new Position();
+    }
 
 }

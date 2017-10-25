@@ -12,12 +12,9 @@ public interface PlayerI {
     int getId();
     TeamColor getTeam();
     String getPlayerName();
-    void setPlayerName(String playerName);
     Image getPlayerPiece();
-    void setPlayerPiece(Image playerPiece);
     int getPlayerID();
-    void setPlayerID(int playerID);
-    Position getPlayerPosition();
+    PositionI getPlayerPosition();
     void setPlayerPosition(Position playerPosition);
-
+    //public PlayerAbsract(String name, Image image, int id, TeamColor team) {
 }

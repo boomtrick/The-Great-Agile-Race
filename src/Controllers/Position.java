@@ -56,5 +56,10 @@ public class Position implements PositionI {
 		row_ = row;
 		col_ = col;
 	}
+
+    @Override
+    public boolean equals(PositionI position) {
+        if
+    }
 	
 }
