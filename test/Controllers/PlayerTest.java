@@ -29,11 +29,15 @@ public class PlayerTest {
     }
 
     @Test public void testConstructor() throws Exception {
-        createActualPlayer();
+        expectedName_ = "ZalmanGagerman";
+        expectedPiece_ = null;
+        expectedId_ = 124531;
+        expectedTeam_ = BLUE;
+        expectedPosition_ = Player.startingPosition();
         assertEquals(expectedId_, actualPlayer_.getId());
         assertEquals(expectedTeam_, actualPlayer_.getTeam());
         assertEquals(expectedPiece_, actualPlayer_.getPlayerPiece());
-        assertEquals(expectedId_, actualPlayer_.getPlayerID());
+        assertEquals(expectedName_, actualPlayer_.getPlayerName());
         assertEquals(expectedPosition_, actualPlayer_.getPlayerPosition());
     }
 

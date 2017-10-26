@@ -52,10 +52,6 @@ public abstract class PlayerAbsract implements PlayerI  {
 		return playerPiece;
 	}
 
-	@Override
-	public int getPlayerID() {
-		return playerID;
-	}
 
 	@Override
 	public PositionI getPlayerPosition() {

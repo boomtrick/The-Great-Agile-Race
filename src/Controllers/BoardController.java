@@ -9,13 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 public class BoardController implements BoardI {
 
-
     private final List<PlayerI> players_;
     private final List<TileI> tiles_;
     private final int rowSize_;
     private final int colSize_;
 
     public BoardController(int rowSize, int colSize, List<PlayerI> players) {
+        assert rowSize > 0;
+        assert colSize > 0;
+        assert players != null;
+
         rowSize_ = rowSize;
         colSize_ = colSize;
         tiles_ = new ArrayList<>();
