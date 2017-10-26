@@ -81,6 +81,10 @@ public class TileController implements TileI {
         return ret;
     }
 
+    @Override public int getSize() {
+        return players_.size();
+    }
+
     @Override
     public boolean hasEvent() {
         return event_;

@@ -63,7 +63,7 @@ public abstract class PlayerAbsract implements PlayerI  {
 	}
 
 	@Override
-	public void setPlayerPosition(Position playerPosition) {
+	public void setPlayerPosition(PositionI playerPosition) {
 		this.playerPosition = playerPosition;
 	}
 

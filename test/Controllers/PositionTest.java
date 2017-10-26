@@ -49,6 +49,4 @@ public class PositionTest {
         assertEquals(expectedRow, actualPosition.getRow());
 
     }
-
-
 }

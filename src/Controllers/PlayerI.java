@@ -15,6 +15,5 @@ public interface PlayerI {
     Image getPlayerPiece();
     int getPlayerID();
     PositionI getPlayerPosition();
-    void setPlayerPosition(Position playerPosition);
-    //public PlayerAbsract(String name, Image image, int id, TeamColor team) {
+    void setPlayerPosition(PositionI playerPosition);
 }

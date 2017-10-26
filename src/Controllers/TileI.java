@@ -10,5 +10,6 @@ public interface TileI {
     void deletePlayer(PlayerI player) throws PlayerNotFoundException;
     boolean has(PlayerI player);
     boolean hasEvent();
+    int getSize();
 
 }
