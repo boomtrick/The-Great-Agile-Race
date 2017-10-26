@@ -29,6 +29,7 @@ public class Tile extends JPanel {
         repaint();
     }
 
+    @Override
 	public void paintComponent(Graphics g) {
 		if(drawable != null){
 			drawable.draw(g);
