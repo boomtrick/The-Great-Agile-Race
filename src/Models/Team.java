@@ -14,6 +14,12 @@ public class Team implements TeamI {
  */
     private final TeamColor color_;
     private List<PlayerI> players_;
+    private int numOfPlayers;
+
+    public Team (TeamColor color, int teamSize){
+        color_=color;
+        numOfPlayers=teamSize;
+    }
 
     public Team(TeamColor color) {
         this(color, new ArrayList<PlayerI>());
@@ -30,18 +36,22 @@ public class Team implements TeamI {
     }
 
     @Override
-    public List<PlayerI> getPlayers() {
-        throw new NotImplementedException();
+    public List<PlayerI> getPlayers() throws NotImplementedException {
+        return players_;
     }
 
     @Override
-    public void setPlayers(List<PlayerI> players) {
-        throw new NotImplementedException();
-        //this.players_ = players;
+    public void setPlayers(List<PlayerI> players) throws NotImplementedException {
+
+        this.players_ = players;
     }
 
     @Override
     public void addPlayer(PlayerI player) {
-        players_.add(player);
+        for (int i=0; i<numOfPlayers; i++)
+        {
+            players_.add(player);
+        }
+
     }
 }
