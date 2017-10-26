@@ -58,8 +58,11 @@ public class Position implements PositionI {
 	}
 
     @Override
-    public boolean equals(PositionI position) {
-        if
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Position)) { return false; }
+        Position position = (Position) obj;
+        if (row_ == position.getRow() && col_ == position.getCol()) { return true; }
+        return false;
     }
 	
 }

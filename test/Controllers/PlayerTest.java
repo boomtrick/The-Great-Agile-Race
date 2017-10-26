@@ -34,6 +34,6 @@ public class PlayerTest {
     }
 
     @Test public void setPlayerPosition() throws Exception {
-
+        
     }
 }
