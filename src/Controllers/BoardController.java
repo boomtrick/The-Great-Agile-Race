@@ -51,4 +51,14 @@ public class BoardController implements BoardI {
             }
         return false;
     }
+
+    @Override
+    public int getRowSize() {
+        return rowSize_;
+    }
+
+    @Override
+    public int getColSize() {
+        return colSize_;
+    }
 }

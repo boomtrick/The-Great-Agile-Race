@@ -5,4 +5,6 @@ package Controllers;
  */
 public interface BoardI {
     boolean movePlayerToTile(PlayerI player, int row, int col) throws MoveException;
+    int getRowSize();
+    int getColSize();
 }
