@@ -3,6 +3,8 @@ package Controllers;
 import Config.BoardConstants.TeamColor;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+
 /**
  * 
  * @author Azamat
@@ -14,12 +16,12 @@ import java.awt.*;
 
 public abstract class PlayerAbsract implements PlayerI  {
 	private final String playerName;
-	private final Image playerPiece;
+	private final BufferedImage playerPiece;
 	private final int playerID;
 	private PositionI playerPosition;
 	private final TeamColor side;
 
-	public PlayerAbsract(String name, Image image, int id, TeamColor team) {
+	public PlayerAbsract(String name, BufferedImage image, int id, TeamColor team) {
 		playerName=name;
 		playerPiece=image;
 		playerID=id;

@@ -22,6 +22,7 @@ public class GameBoard extends JFrame {
 		
 		frame.setLocationByPlatform(true);
 
+
 	    // ensures the frame is the minimum size it needs to be
 	    // in order display the components within it
 	    frame.pack();
@@ -33,11 +34,12 @@ public class GameBoard extends JFrame {
 
 	    Dialogue dialogue = new Dialogue();
 	    dialogue.welcomeMessage(frame);
+
 	}
 	
 	public JPanel buildBoard(int height , int width)
 	{
-		
+
 		JPanel board = new Board(height,width, this.getImage());
 		return board;
 		
