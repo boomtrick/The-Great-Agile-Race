@@ -34,7 +34,7 @@ public class Team implements TeamI {
 
 
     //Returns game piece based on team color
-    public BufferedImage getGamePiece(TeamColor color){
+    public BufferedImage getGamePiece(){
         BufferedImage img = null;
 
         try
