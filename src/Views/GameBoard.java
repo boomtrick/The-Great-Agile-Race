@@ -30,6 +30,9 @@ public class GameBoard extends JFrame {
 	    frame.setMinimumSize(board.getPreferredSize());
 	    //frame.setResizable(false);
 	    frame.setVisible(true);
+
+	    Dialogue dialogue = new Dialogue();
+	    dialogue.welcomeMessage(frame);
 	}
 	
 	public JPanel buildBoard(int height , int width)
