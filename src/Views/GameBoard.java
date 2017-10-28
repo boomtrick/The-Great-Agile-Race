@@ -1,25 +1,15 @@
 package Views;
 
-import Controllers.TileController;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import static Config.BoardConstants.TeamColor.BLUE;
-import static Config.BoardConstants.TeamColor.RED;
 
 public class GameBoard extends JFrame {
 
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
-	
 	public GameBoard(){
 		
 	}
@@ -57,7 +47,7 @@ public class GameBoard extends JFrame {
 		try 
 		{ 
 			//img = ImageIO.read(new File("C:\\Users\\Mark\\Documents\\The-Great-Agile-Race\\src\\Views\\Images\\board.png"));
-	         img = ImageIO.read(new File("/Views/Images/board.png"));
+	         img = ImageIO.read(new File("src/Views/Images/board.png"));
 	         System.out.println("image found");
 	     } 
 			catch (IOException e) {
@@ -67,5 +57,8 @@ public class GameBoard extends JFrame {
 		return img;
 	
 	}
-		
+
+	private void createUIComponents() {
+		// TODO: place custom component creation code here
+	}
 }
