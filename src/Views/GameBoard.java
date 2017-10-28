@@ -11,19 +11,25 @@ public class GameBoard extends JFrame {
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
 	public GameBoard(){
-		
+
 	}
 	
 	public void run(){
 		
 		board = this.buildBoard(10,7);
 		
-		frame.add(board);
+		//frame.add(board);
 		
 		frame.setLocationByPlatform(true);
 
+		JComponent sidebarComponent = new JButton("Bottom Button");
+		JSplitPane pane = new JSplitPane( JSplitPane.HORIZONTAL_SPLIT,
+				board, bottomComponent );
 
-	    // ensures the frame is the minimum size it needs to be
+
+		frame.add(pane);
+		//getContentPane ().add (right, BorderLayout.EAST);
+		// ensures the frame is the minimum size it needs to be
 	    // in order display the components within it
 	    frame.pack();
 	    // ensures the minimum size is enforced.
