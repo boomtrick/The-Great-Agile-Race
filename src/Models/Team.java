@@ -4,8 +4,15 @@ import Config.BoardConstants.TeamColor;
 import Controllers.PlayerI;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static Config.BoardConstants.TeamColor.BLUE;
+import static Config.BoardConstants.TeamColor.RED;
 
 public class Team implements TeamI {
 
@@ -25,10 +32,37 @@ public class Team implements TeamI {
         this(color, new ArrayList<PlayerI>());
     }
 
+
+    //Returns game piece based on team color
+    public BufferedImage getGamePiece(TeamColor color){
+        BufferedImage img = null;
+
+        try
+        {
+            if (getColor() == RED){//return red image
+
+                img = ImageIO.read(new File("src/Views/Images/red-piece.png"));
+
+            } else if (getColor() == BLUE){
+
+                img = ImageIO.read(new File("src/Views/Images/blue-piece.png"));
+            }
+
+            System.out.println("image found");
+        }
+        catch (IOException e) {
+            System.out.println("No image found");
+        }
+
+        return img;
+    }
+
+
     public Team(TeamColor color, List<PlayerI> players) {
         color_ = color;
         players_ = players;
     }
+
 
     @Override
     public TeamColor getColor() {
