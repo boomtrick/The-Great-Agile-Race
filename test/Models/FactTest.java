@@ -2,7 +2,11 @@ package Models;
 
 
 
-//import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+
 
 import Models.Fact;
 
@@ -12,15 +16,15 @@ public class FactTest {
 	String text = "this is fact!!";
 	Fact fact = new Fact(id,text);
 	
-	//@Test
-	//public void getText()
-	//{
-	//	assertEquals(text,fact.getFact());
-	//}
+	@Test
+	public void getText()
+	{
+		assertEquals(text,fact.getText());
+	}
 	
-	//@Test
-	//public void getId(){
-	//	assertEquals(id,fact.getId());
-	//}
+	@Test
+	public void getId(){
+		assertEquals(id,fact.getId());
+	}
 
 }
