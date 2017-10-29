@@ -1,1 +1,8 @@
 language: java
+
+notifications:
+    email:
+        - markjitthompson@gmail.com
+        - go.joce@gmail.com
+        - azamat6056@gmail.com
+        - ZALMAN.GAGERMAN@gmail.com
