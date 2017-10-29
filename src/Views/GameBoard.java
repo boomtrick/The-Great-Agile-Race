@@ -7,16 +7,20 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GameBoard extends JFrame {
 
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
-	private JButton btnNewPlayer = null;
+	private JButton btnStartGame = null;
 	private JLabel txtBlueTeam = null;
 	private JLabel txtRedTeam;
 	private JButton btnAddPlayerRed;
 	private JButton btnAddPlayerBlue;
+	private List<JLabel> lblPlayersBlue = new ArrayList<JLabel>();
+	private List<JLabel> lblPlayersRed = new ArrayList<JLabel>();
 
 	public GameBoard(){
 
@@ -65,12 +69,18 @@ public class GameBoard extends JFrame {
 
 	public JComponent buildSidePanel(JComponent panelIn){
 
-		this.btnNewPlayer = new JButton("New Player");
+		this.btnStartGame = new JButton("Start Game");
 		this.btnAddPlayerRed = new JButton("Add Player");
 		this.btnAddPlayerBlue = new JButton("Add Player");
 
 		this.txtBlueTeam = new JLabel("Blue Team");
 		this.txtRedTeam = new JLabel("Red Team");
+
+		//Create labels for player names
+		for (int i = 0; i <= 6; i++){
+			lblPlayersBlue.add(i, new JLabel("<Empty Slot>"));
+			lblPlayersRed.add(i, new JLabel("<Empty Slot>"));
+		}
 
 
 
@@ -79,12 +89,18 @@ public class GameBoard extends JFrame {
 		//Makes layout vertical
 		panelIn.setLayout(new BoxLayout(panelIn, BoxLayout.Y_AXIS));
 		panelIn.add(txtBlueTeam);
-
+//
+		for (JLabel player : lblPlayersBlue){
+			panelIn.add(player);
+		}
 		panelIn.add(btnAddPlayerBlue);
 		panelIn.add(txtRedTeam);
 
+		for (JLabel player : lblPlayersRed){
+			panelIn.add(player);
+		}
 		panelIn.add(btnAddPlayerRed);
-		panelIn.add(btnNewPlayer);
+		panelIn.add(btnStartGame);
 
 		//Code for action listeners
 		ActionListener addPlayerListener = new ActionListener() {
@@ -93,7 +109,11 @@ public class GameBoard extends JFrame {
 				JButton button = (JButton) event.getSource();
 				//}
 				if(button.equals(btnAddPlayerRed)){
-					JOptionPane.showInputDialog("Add player red listener: ");
+					String name = JOptionPane.showInputDialog("Welcome to Team Red.  What's your name? ");
+
+				}
+				if(button.equals(btnAddPlayerBlue)){
+					JOptionPane.showInputDialog("Add player blue triggered: ");
 				}
 			}
 		};
