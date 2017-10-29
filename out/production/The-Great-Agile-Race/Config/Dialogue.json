@@ -333,6 +333,34 @@
 			"relatedFact": "25"
 		}
 
+	],
+
+	"Event": [{
+			"id": "01",
+			"action":"Oh no! Someone was was sick today and your progress relied heavily on them! Move back one space."
+		}, {
+			"id":"02",
+			"action":"Good news and bad news! Good news is your team member has a new born baby! Bad news is the team will be set back slightly. Team each moves back one space."
+		}, {
+			"id":"03",
+			"action":"You finished the story significantly faster than expected. It seems the story points weren't anticipated correctly! Move forward one space."
+		}, {
+			"id":"04",
+			"action":"Your department was contacted by the user and informed your team that they no longer need a specific function anymore. Team moves up by one space."
+		}, {
+			"id":"05",
+			"action":"You're having more trouble than you anticipated. Move back one space."
+		}, {
+			"id":"06",
+			"action":"Unfortunately, there may be more on your plate than you originally thought you could complete. Move back one space."
+		}, {
+			"id":"07",
+			"action":"Your team is performing wonderfully! The code is flowing through your fingertips! Everyone in your team move up one space."
+		}, {
+			"id":"08",
+			"action":"Great job! Your hard work is really starting to pay off! Everything seems easier after your google search showed you the way. Move foward by one space."
+		}
+
 	]
 
 }

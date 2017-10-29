@@ -68,10 +68,11 @@ public class PlayerTest {
         expectedId_ = actualPlayer_.getId();
         expectedTeam_ = actualPlayer_.getTeam();
         expectedPosition_ = actualPlayer_.getPlayerPosition();
-        actualPlayer_ = new Player(expectedName_, expectedPiece_, expectedId_,
-                expectedTeam_);
+        actualPlayer_ = null /** new Player(expectedName_, expectedPiece_, expectedId_,
+                expectedTeam_)  **/;
         return actualPlayer_;
     }
+    
 
     public static PlayerI generatePlayer() throws Exception {
         String expectedName = "ZalmanGagerman";
@@ -79,8 +80,8 @@ public class PlayerTest {
         int expectedId = 124531;
         TeamColor expectedTeam = BLUE;
         PositionI expectedPosition = Player.startingPosition();
-        return new Player(expectedName, expectedPiece, expectedId,
-                expectedTeam);
+        return null /** new Player(expectedName, expectedPiece, expectedId,
+                expectedTeam) **/;
     }
 
     public static PlayerI generateRandomPlayer(TeamColor team) throws Exception {

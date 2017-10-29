@@ -41,4 +41,5 @@ public class Fact implements SpecialEvent {
 		this.text = text;
 	}
 
+
 }

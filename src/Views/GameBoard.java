@@ -1,55 +1,68 @@
 package Views;
 
-import Controllers.TileController;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import static Config.BoardConstants.TeamColor.BLUE;
-import static Config.BoardConstants.TeamColor.RED;
 
 public class GameBoard extends JFrame {
 
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
-	
+	private JButton btnNewGame = null;
 	public GameBoard(){
-		
+
 	}
 	
 	public void run(){
 		
 		board = this.buildBoard(10,7);
-		
-		frame.add(board);
-		
+
+		//frame.add(board);
+
 		frame.setLocationByPlatform(true);
 
-	    // ensures the frame is the minimum size it needs to be
+		//Init and create side panel
+		JComponent sidePanel = new JPanel();
+		JComponent filledSidePanel = this.buildSidePanel(sidePanel);
+
+
+		//Split the frames to display
+		JSplitPane pane = new JSplitPane( JSplitPane.HORIZONTAL_SPLIT,
+				board, filledSidePanel );
+		frame.add(pane);
+
+
+		// ensures the frame is the minimum size it needs to be
 	    // in order display the components within it
 	    frame.pack();
 	    // ensures the minimum size is enforced.
-
 	    frame.setMinimumSize(board.getPreferredSize());
 	    //frame.setResizable(false);
 	    frame.setVisible(true);
+
+	    Dialogue dialogue = new Dialogue();
+	    dialogue.welcomeMessage(frame);
+
 	}
-	
+
+
 	public JPanel buildBoard(int height , int width)
 	{
-		
+
 		JPanel board = new Board(height,width, this.getImage());
 		return board;
-		
+
 	}
-	
+
+	public JComponent buildSidePanel(JComponent panelIn){
+
+		this.btnNewGame = new JButton("New Game");
+		panelIn.add(btnNewGame);
+		return panelIn;
+	}
+
 	private BufferedImage getImage()
 	{
 		BufferedImage img = null;
@@ -57,7 +70,7 @@ public class GameBoard extends JFrame {
 		try 
 		{ 
 			//img = ImageIO.read(new File("C:\\Users\\Mark\\Documents\\The-Great-Agile-Race\\src\\Views\\Images\\board.png"));
-	         img = ImageIO.read(new File("/Views/Images/board.png"));
+	         img = ImageIO.read(new File("src/Views/Images/board.png"));
 	         System.out.println("image found");
 	     } 
 			catch (IOException e) {
@@ -67,5 +80,8 @@ public class GameBoard extends JFrame {
 		return img;
 	
 	}
-		
+
+	private void createUIComponents() {
+		// TODO: place custom component creation code here
+	}
 }
