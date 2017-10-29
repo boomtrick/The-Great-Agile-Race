@@ -10,6 +10,7 @@ public class GameBoard extends JFrame {
 
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
+	private JButton btnNewGame = null;
 	public GameBoard(){
 
 	}
@@ -46,6 +47,7 @@ public class GameBoard extends JFrame {
 
 	}
 
+
 	public JPanel buildBoard(int height , int width)
 	{
 
@@ -56,10 +58,11 @@ public class GameBoard extends JFrame {
 
 	public JComponent buildSidePanel(JComponent panelIn){
 
-		JButton button = new JButton("Bottom Button");
-		panelIn.add(button);
+		this.btnNewGame = new JButton("New Game");
+		panelIn.add(btnNewGame);
 		return panelIn;
 	}
+
 	private BufferedImage getImage()
 	{
 		BufferedImage img = null;
