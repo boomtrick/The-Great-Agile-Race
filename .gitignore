@@ -4,3 +4,4 @@ bin
 .project
 *.iml
 *.class
+/target/
