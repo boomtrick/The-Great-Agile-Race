@@ -72,15 +72,6 @@ public class GameBoard extends JFrame {
 		this.txtBlueTeam = new JLabel("Blue Team");
 		this.txtRedTeam = new JLabel("Red Team");
 
-		//When new game button is pressed, populate to ask for inputs
-		btnAddPlayerRed.addActionListener(new ActionListener()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-
-				btnNewPlayer.setVisible(false);
-			}
-		});
 
 
 
@@ -95,6 +86,22 @@ public class GameBoard extends JFrame {
 		panelIn.add(btnAddPlayerRed);
 		panelIn.add(btnNewPlayer);
 
+		//Code for action listeners
+		ActionListener addPlayerListener = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent event){
+				JButton button = (JButton) event.getSource();
+				//}
+				if(button.equals(btnAddPlayerRed)){
+					JOptionPane.showInputDialog("Add player red listener: ");
+				}
+			}
+		};
+
+
+		//Add listeners here
+		btnAddPlayerBlue.addActionListener(addPlayerListener);
+		btnAddPlayerRed.addActionListener(addPlayerListener);
 		return panelIn;
 
 	}
