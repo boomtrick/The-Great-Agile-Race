@@ -89,10 +89,11 @@ public class GameBoard extends JFrame {
 		//Makes layout vertical
 		panelIn.setLayout(new BoxLayout(panelIn, BoxLayout.Y_AXIS));
 		panelIn.add(txtBlueTeam);
-//
+
 		for (JLabel player : lblPlayersBlue){
 			panelIn.add(player);
 		}
+
 		panelIn.add(btnAddPlayerBlue);
 		panelIn.add(txtRedTeam);
 
@@ -103,6 +104,7 @@ public class GameBoard extends JFrame {
 		panelIn.add(btnStartGame);
 
 		//Code for action listeners
+
 		ActionListener addPlayerListener = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event){
@@ -110,21 +112,30 @@ public class GameBoard extends JFrame {
 				//}
 				if(button.equals(btnAddPlayerRed)){
 					String name = JOptionPane.showInputDialog("Welcome to Team Red.  What's your name? ");
+					if (!name.isEmpty()){
+						//put a new piece on the board
+
+					}
 
 				}
 				if(button.equals(btnAddPlayerBlue)){
-					JOptionPane.showInputDialog("Add player blue triggered: ");
+					String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
+					if (!name.isEmpty()){
+						//put a new piece on the board
+
+					}
 				}
 			}
 		};
 
 
-		//Add listeners here
+		//Add listeners here for side panel
 		btnAddPlayerBlue.addActionListener(addPlayerListener);
 		btnAddPlayerRed.addActionListener(addPlayerListener);
 		return panelIn;
 
 	}
+
 
 	private BufferedImage getImage()
 	{
