@@ -17,23 +17,26 @@ public class GameBoard extends JFrame {
 	public void run(){
 		
 		board = this.buildBoard(10,7);
-		
+
 		//frame.add(board);
-		
+
 		frame.setLocationByPlatform(true);
 
-		JComponent sidebarComponent = new JButton("Bottom Button");
+		//Init and create side panel
+		JComponent sidePanel = new JPanel();
+		JComponent filledSidePanel = this.buildSidePanel(sidePanel);
+
+
+		//Split the frames to display
 		JSplitPane pane = new JSplitPane( JSplitPane.HORIZONTAL_SPLIT,
-				board, bottomComponent );
-
-
+				board, filledSidePanel );
 		frame.add(pane);
-		//getContentPane ().add (right, BorderLayout.EAST);
+
+
 		// ensures the frame is the minimum size it needs to be
 	    // in order display the components within it
 	    frame.pack();
 	    // ensures the minimum size is enforced.
-
 	    frame.setMinimumSize(board.getPreferredSize());
 	    //frame.setResizable(false);
 	    frame.setVisible(true);
@@ -42,15 +45,21 @@ public class GameBoard extends JFrame {
 	    dialogue.welcomeMessage(frame);
 
 	}
-	
+
 	public JPanel buildBoard(int height , int width)
 	{
 
 		JPanel board = new Board(height,width, this.getImage());
 		return board;
-		
+
 	}
-	
+
+	public JComponent buildSidePanel(JComponent panelIn){
+
+		JButton button = new JButton("Bottom Button");
+		panelIn.add(button);
+		return panelIn;
+	}
 	private BufferedImage getImage()
 	{
 		BufferedImage img = null;
