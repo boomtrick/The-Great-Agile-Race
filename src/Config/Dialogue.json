@@ -1,0 +1,366 @@
+{
+	"Fact": [{
+			"id": "01",
+			"text": "Present Value is the value of an investment's future earnings in today's money."
+		},
+		{
+			"id": "02",
+			"text": "Net Present Value is the present value of an investment's earnings less the investment itself."
+		},
+		{
+			"id": "03",
+			"text": "The Software Development Iron Triangle represents how traditionally time, cost, and quality were variable while scope was immutable."
+		},
+		{
+			"id": "04",
+			"text": "Boehm's Curve is a cost curve that claims that cost increases exponentially the later on in the development lifecycle that a change is required."
+		},
+		{
+			"id": "05",
+			"text": "The Waterfall Model is a software development model characterized by gates where work in the next phase doesn't typically begin until the prior phase is complete."
+		},
+		{
+			"id": "06",
+			"text": "The Cone of Uncertainty represents the concept that the  closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software."
+		},
+		{
+			"id": "07",
+			"text": "Small additions or changes to a system’s capabilities is called an Increment."
+		},
+		{
+			"id": "08",
+			"text": "A software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback is called the Spiral Model."
+		},
+		{
+			"id": "09",
+			"text": "Takeuchi and Nonaka mention that Multilevel learning, Built-in instability, and self-organizing teams are traits of companies that are successful at process re-engineering."
+		},
+		{
+			"id": "10",
+			"text": "Each sprint should result in a potentially shippable product."
+		},
+		{
+			"id": "11",
+			"text": "In Scrum, developers volunteer to complete tasks within a sprint."
+		},
+		{
+			"id": "12",
+			"text": "One of the ScrumMaster’s duties is to make sure that no one gets overloaded."
+		},
+		{
+			"id": "13",
+			"text": "Activities such as defining the sprint goal, selecting stories from the product backlog, estimating those stories, and communicating how much work the team thinks can be completed during the sprint, is called Sprint Planning."
+		},
+		{
+			"id": "14",
+			"text": "The Daily Scrum should answer questions such as : What have you done since yesterday, what will you do today, and do you have any obstacles."
+		},
+		{
+			"id": "15",
+			"text": "Scrum of Scrums should answer the questions: What has your team done since we last met, what will your team do before we next meet, is there anything slowing your team down, and are you about to slow another team down?"
+		},
+		{
+			"id": "16",
+			"text": "Refining acceptance criteria, and splitting or merging stories is called Backlog Grooming"
+		},
+		{
+			"id": "17",
+			"text": "Sprint Review is when you demonstrate the work that was completed and discuss the work that was planned but not completed."
+		},
+		{
+			"id": "18",
+			"text": "The Sprint Retrospective answers the questions: What went well and what could be improved."
+		},
+		{
+			"id": "19",
+			"text": "Story points are an agreed upon unit of measure for estimating how much effort is required to implement a product backpack item or other pieces of work."
+		},
+		{
+			"id": "20",
+			"text": "The number of story points delivered during a sprint is called the Velocity"
+		},
+		{
+			"id": "21",
+			"text": "To complete a release plan, you will need the team’s sprint budget, the stories in the roadmap, and the estimates for each story in the roadmap."
+		},
+		{
+			"id": "22",
+			"text": "A burndown chart can be used to show team progress for a sprint, for a release, and for the product delivery as a whole."
+		},
+		{
+			"id": "23",
+			"text": "Stories that are not independent can often be made more independent by combining them with other stories, or by splitting it in a different way."
+		},
+		{
+			"id": "24",
+			"text": "Testability is a critical aspect of any story."
+		},
+		{
+			"id": "25",
+			"text": "A spike is a kind of story that is used by development teams to eliminate technical uncertainty."
+		}
+	],
+
+	"Quiz": [{
+			"id": "01",
+			"question": "Which of the following best describes Present Value?",
+			"a": "The shippable product at the end of each sprint.",
+			"b": "The value of an investment’s future earnings in today’s money.",
+			"c": "The small additions or changes to a system’s capabilities.",
+			"d": "The amount of value you place on your current product.",
+			"answer": "b",
+			"relatedFact": "01"
+		},
+
+		{
+			"id": "02",
+			"question": "Net Present Value is the present value of an investment’s earnings plus the investment.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "b",
+			"relatedFact": "02"
+		},
+
+		{
+			"id": "03",
+			"question": "What does the Software Development Iron Triangle represent?",
+			"a": "How traditionally time, cost, and quality were variable while scope was immutable.",
+			"b": "How traditionally scope, quality, and time were variable while cost was immutable.",
+			"c": "How traditionally quality, scope, and cost were variable while time was immutable.",
+			"d": "How traditionally cost, scope, and time were variable while quality was immutable.",
+			"answer": "a",
+			"relatedFact": "03"
+		},
+		{
+			"id": "04",
+			"question": "Boehm’s Curve is a curve that claims that ____ increases exponentially the later on in the development lifecycle that a change is required.",
+			"a": "Time",
+			"b": "Quality",
+			"c": "Scope",
+			"d": "Cost",
+			"answer": "d",
+			"relatedFact": "04"
+		}, {
+			"id": "05",
+			"question": "The Waterfall Model is a software development model characterized by gates where work in the next phase doesn’t typically begin until what occurs?",
+			"a": "The prior phase is complete",
+			"b": "The team concludes that the next phase takes priority for development",
+			"c": "The supervisor gives the team permission to advance",
+			"d": "The investors hold a meeting with how to proceed.",
+			"answer": "a",
+			"relatedFact": "05"
+		}, {
+			"id": "06",
+			"question": "Which of the following best describes the Cone of Uncertainty?",
+			"a": "We never know exactly what we're building until later on in a project.",
+			"b": "A software delivery model that emphasizes iterative and incremental development.",
+			"c": "Another name for the Waterfall model.",
+			"d": "The closer to the end of the project we are, the easier it is to project exactly when we'll be able to deliver the completed software.",
+			"answer": "d",
+			"relatedFact": "06"
+		}, {
+			"id": "07",
+			"question": "Regarding Agile, which of the following is an Increment?",
+			"a": "When you increase something",
+			"b": "When you include a large patch to a program",
+			"c": "When small additions or changes occur to a system’s capabilities",
+			"d": "None of the above",
+			"answer": "c",
+			"relatedFact": "07"
+		}, {
+			"id": "08",
+			"question": "What is the software development model built on Waterfall that revisits earlier phases multiple times to incorporate feedback?",
+			"a": "Spiral Model",
+			"b": "Revisit Model",
+			"c": "Double-Check Model",
+			"d": "The Waterfall redevelopment Model",
+			"answer": "a",
+			"relatedFact": "08"
+		}, {
+			"id": "09",
+			"question": "What are the traits that Takeuchi and Nonaka mention for companies that are successful at process re-engineering?",
+			"a": "Multilevel learning, Built-in instability, and self-organizing teams",
+			"b": "Self-organizing teams, Individual Work, Worker Specialization",
+			"c": "Multilevel learning, Worker Specialization, Self-organizing teams",
+			"d": "None of the above",
+			"answer": "a",
+			"relatedFact": "09"
+		}, {
+			"id": "10",
+			"question": "Each sprint should result in a potentially shippable product.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "a",
+			"relatedFact": "10"
+		}, {
+			"id": "11",
+			"question": "How are tasks given within a sprint in Scrum?",
+			"a": "Tasks are assigned based on specialization",
+			"b": "Tasks are assigned based on availability",
+			"c": "Tasks are volunteered for",
+			"d": "Tasks are given based on current workload",
+			"answer": "c",
+			"relatedFact": "11"
+		}, {
+			"id": "12",
+			"question": "One of the ScrumMaster’s duties is to make sure that no one gets overloaded.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "a",
+			"relatedFact": "12"
+		}, {
+			"id": "13",
+			"question": "Which of the following is NOT an activity in Sprint Planning?",
+			"a": "Defining the sprint goal",
+			"b": "Communicating how much work the team thinks can be completed during the sprint",
+			"c": "Selecting stories from the product backlog",
+			"d": "None of the above",
+			"answer": "d",
+			"relatedFact": "13"
+		}, {
+			"id": "14",
+			"question": "Which of the following is NOT a question that Daily Scrums should answer?",
+			"a": "What have you done since yesterday?",
+			"b": "When will you finish your task?",
+			"c": "What will you do today?",
+			"d": "Do you have any obstacles?",
+			"answer": "b",
+			"relatedFact": "14"
+		}, {
+			"id": "15",
+			"question": "Which of the following is a question that Scrum of Scrums should answer?",
+			"a": "What has your team done since we last met?",
+			"b": "What will your team do before we next meet?",
+			"c": "Is there anything slowing your team down?",
+			"d": "All of the above",
+			"answer": "d",
+			"relatedFact": "15"
+		}, {
+			"id": "16",
+			"question": "Refining acceptance criteria, and splitting or merging stories is called Backlog Grooming.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "a",
+			"relatedFact": "16"
+		}, {
+			"id": "17",
+			"question": "Sprint Review answers the questions: What went well and what could be improved.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "b",
+			"relatedFact": "17"
+		}, {
+			"id": "18",
+			"question": "The Sprint Retrospective answers the questions: What went well and what could be improved.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "a",
+			"relatedFact": "18"
+		}, {
+			"id": "19",
+			"question": "How are the value of Story Points estimated?",
+			"a": "In Hours",
+			"b": "In Days",
+			"c": "They are agreed upon as a unit of measure for estimating how much effort is required",
+			"d": "They are a universally accepted unit of measure that roughly translates to a full work day.",
+			"answer": "c",
+			"relatedFact": "19"
+		}, {
+			"id": "20",
+			"question": "The number of story points delivered during a sprint is called the ___.",
+			"a": "Speed",
+			"b": "Acceleration",
+			"c": "Success Rate",
+			"d": "Velocity",
+			"answer": "d",
+			"relatedFact": "20"
+		}, {
+			"id": "21",
+			"question": "What is required to complete a release plan?",
+			"a": "The team’s sprint budget, the stories in the roadmap, and the estimates for each story in the roadmap.",
+			"b": "The final delivery date, the list of tasks in the sprints leading to the product completion, and all the stories involved with each sprint.",
+			"c": "Both A and B",
+			"d": "None of the above",
+			"answer": "a",
+			"relatedFact": "21"
+		}, {
+			"id": "22",
+			"question": "What can a Burndown chart be used to show team progress for?",
+			"a": "A sprint",
+			"b": "A release",
+			"c": "the product delivery as a whole",
+			"d": "All of the above",
+			"answer": "d",
+			"relatedFact": "22"
+		}, {
+			"id": "23",
+			"question": "What are some ways to make stories that are not independent more independent?",
+			"a": "By combining them with other stories",
+			"b": "By splitting the story in a different way",
+			"c": "Both A and B",
+			"d": "None of the above",
+			"answer": "c",
+			"relatedFact": "23"
+		}, {
+			"id": "24",
+			"question": "Testability isn’t important for any story.",
+			"a": "True",
+			"b": "False",
+			"c": "",
+			"d": "",
+			"answer": "b",
+			"relatedFact": "24"
+		}, {
+			"id": "25",
+			"question": "What is a kind of story that is used by development teams to eliminate technical uncertainty?",
+			"a": "Spike",
+			"b": "Nail",
+			"c": "Screw",
+			"d": "Testing",
+			"answer": "a",
+			"relatedFact": "25"
+		}
+
+	],
+
+	"Event": [{
+			"id": "01",
+			"action":"Oh no! Someone was was sick today and your progress relied heavily on them! Move back one space."
+		}, {
+			"id":"02",
+			"action":"Good news and bad news! Good news is your team member has a new born baby! Bad news is the team will be set back slightly. Team each moves back one space."
+		}, {
+			"id":"03",
+			"action":"You finished the story significantly faster than expected. It seems the story points weren't anticipated correctly! Move forward one space."
+		}, {
+			"id":"04",
+			"action":"Your department was contacted by the user and informed your team that they no longer need a specific function anymore. Team moves up by one space."
+		}, {
+			"id":"05",
+			"action":"You're having more trouble than you anticipated. Move back one space."
+		}, {
+			"id":"06",
+			"action":"Unfortunately, there may be more on your plate than you originally thought you could complete. Move back one space."
+		}, {
+			"id":"07",
+			"action":"Your team is performing wonderfully! The code is flowing through your fingertips! Everyone in your team move up one space."
+		}, {
+			"id":"08",
+			"action":"Great job! Your hard work is really starting to pay off! Everything seems easier after your google search showed you the way. Move foward by one space."
+		}
+
+	]
+
+}
