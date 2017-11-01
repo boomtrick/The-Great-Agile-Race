@@ -126,7 +126,7 @@ public class GameBoard extends JFrame {
 						}
 						lblPlayersRed.get(0).setText(name);
 						Player newPlayer = new Player(name, img, 1, RED);
-						newPlayer.setPlayerPosition();
+						//newPlayer.setPlayerPosition();
 						//put a new piece on the board
 
 					}
