@@ -1,5 +1,7 @@
 package Views;
 
+import Controllers.Player;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -9,6 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import static Config.BoardConstants.TeamColor.RED;
 
 public class GameBoard extends JFrame {
 
@@ -109,10 +113,20 @@ public class GameBoard extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent event){
 				JButton button = (JButton) event.getSource();
+
 				//}
 				if(button.equals(btnAddPlayerRed)){
+					BufferedImage img = null;
 					String name = JOptionPane.showInputDialog("Welcome to Team Red.  What's your name? ");
 					if (!name.isEmpty()){
+						try {
+							img = ImageIO.read(new File("src/Views/Images/red-piece.png"));
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+						lblPlayersRed.get(0).setText(name);
+						Player newPlayer = new Player(name, img, 1, RED);
+						newPlayer.setPlayerPosition();
 						//put a new piece on the board
 
 					}
@@ -121,6 +135,7 @@ public class GameBoard extends JFrame {
 				if(button.equals(btnAddPlayerBlue)){
 					String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
 					if (!name.isEmpty()){
+						lblPlayersBlue.get(0).setText(name);
 						//put a new piece on the board
 
 					}
