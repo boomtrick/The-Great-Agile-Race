@@ -1,7 +1,6 @@
 package Models;
 
 import Config.BoardConstants.TeamColor;
-import Controllers.PlayerI;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.imageio.ImageIO;

@@ -1,4 +1,4 @@
-package Controllers;
+package Models;
 
 import Config.BoardConstants.TeamColor;
 
@@ -8,7 +8,7 @@ public class Player extends PlayerAbsract {
 
 	public Player(String name, BufferedImage image, int id, TeamColor team) {
 		super(name, image, id, team);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 

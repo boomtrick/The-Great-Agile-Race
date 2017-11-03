@@ -2,6 +2,10 @@ package Views;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import Config.BoardConstants.TeamColor;
+import Models.Player;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -10,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameBoard extends JFrame {
+public class GameBoard extends JFrame implements ActionListener{
 
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
@@ -21,6 +25,8 @@ public class GameBoard extends JFrame {
 	private JButton btnAddPlayerBlue;
 	private List<JLabel> lblPlayersBlue = new ArrayList<JLabel>();
 	private List<JLabel> lblPlayersRed = new ArrayList<JLabel>();
+	private JSplitPane pane;
+	private JComponent filledSidePanel;
 
 	public GameBoard(){
 
@@ -36,11 +42,11 @@ public class GameBoard extends JFrame {
 
 		//Init and create side panel
 		JComponent sidePanel = new JPanel();
-		JComponent filledSidePanel = this.buildSidePanel(sidePanel);
+		filledSidePanel = this.buildSidePanel(sidePanel);
 
 
 		//Split the frames to display
-		JSplitPane pane = new JSplitPane( JSplitPane.HORIZONTAL_SPLIT,
+		pane = new JSplitPane( JSplitPane.HORIZONTAL_SPLIT,
 				board, filledSidePanel );
 		frame.add(pane);
 
@@ -76,15 +82,7 @@ public class GameBoard extends JFrame {
 		this.txtBlueTeam = new JLabel("Blue Team");
 		this.txtRedTeam = new JLabel("Red Team");
 
-		//Create labels for player names
-		for (int i = 0; i <= 6; i++){
-			lblPlayersBlue.add(i, new JLabel("<Empty Slot>"));
-			lblPlayersRed.add(i, new JLabel("<Empty Slot>"));
-		}
-
-
-
-
+		setUpTeams();
 
 		//Makes layout vertical
 		panelIn.setLayout(new BoxLayout(panelIn, BoxLayout.Y_AXIS));
@@ -103,40 +101,94 @@ public class GameBoard extends JFrame {
 		panelIn.add(btnAddPlayerRed);
 		panelIn.add(btnStartGame);
 
-		//Code for action listeners
-
-		ActionListener addPlayerListener = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent event){
-				JButton button = (JButton) event.getSource();
-				//}
-				if(button.equals(btnAddPlayerRed)){
-					String name = JOptionPane.showInputDialog("Welcome to Team Red.  What's your name? ");
-					if (!name.isEmpty()){
-						//put a new piece on the board
-
-					}
-
-				}
-				if(button.equals(btnAddPlayerBlue)){
-					String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
-					if (!name.isEmpty()){
-						//put a new piece on the board
-
-					}
-				}
-			}
-		};
-
-
 		//Add listeners here for side panel
-		btnAddPlayerBlue.addActionListener(addPlayerListener);
-		btnAddPlayerRed.addActionListener(addPlayerListener);
+		btnAddPlayerBlue.addActionListener(this);
+		btnAddPlayerRed.addActionListener(this);
 		return panelIn;
 
 	}
+	
+	private JComponent updateSidePanel()
+	{
+		JComponent panelIn = new JPanel();
+		this.btnStartGame = new JButton("Start Game");
+		this.btnAddPlayerRed = new JButton("Add Player");
+		this.btnAddPlayerBlue = new JButton("Add Player");
 
+		this.txtBlueTeam = new JLabel("Blue Team");
+		this.txtRedTeam = new JLabel("Red Team");
 
+		//Makes layout vertical
+		panelIn.setLayout(new BoxLayout(panelIn, BoxLayout.Y_AXIS));
+		panelIn.add(txtBlueTeam);
+
+		for (JLabel player : lblPlayersBlue){
+			panelIn.add(player);
+		}
+
+		panelIn.add(btnAddPlayerBlue);
+		panelIn.add(txtRedTeam);
+
+		for (JLabel player : lblPlayersRed){
+			panelIn.add(player);
+		}
+		panelIn.add(btnAddPlayerRed);
+		panelIn.add(btnStartGame);
+		
+		return panelIn;
+	}
+
+	/**
+	 *  This updates board whenever a change occurs.
+	 */
+	private void updateBoard()
+	{
+	
+		frame.repaint();
+	}
+	
+	public void actionPerformed(ActionEvent event){
+		JButton button = (JButton) event.getSource();
+		//}
+		if(button.equals(btnAddPlayerRed)){
+			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");
+			if (!name.isEmpty()){
+				//put a new piece on the board
+				
+				for(int i = 0; i < lblPlayersRed.size(); i++)
+				{
+					if(lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
+					{
+						lblPlayersRed.get(i).setText(name);
+						//TO DO add player to board controller.
+						break;
+					}
+					
+				}
+				
+				updateBoard();
+
+			}
+
+		}
+		if(button.equals(btnAddPlayerBlue)){
+			String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
+			if (!name.isEmpty()){
+				//put a new piece on the board
+
+			}
+		}
+	}
+	
+	
+	private void setUpTeams()
+	{
+		//Create labels for player names
+		for (int i = 0; i <= 6; i++){
+			lblPlayersBlue.add(i, new JLabel("<Empty Slot>"));
+			lblPlayersRed.add(i, new JLabel("<Empty Slot>"));
+		}
+	}
 	private BufferedImage getImage()
 	{
 		BufferedImage img = null;

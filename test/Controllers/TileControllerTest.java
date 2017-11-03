@@ -3,6 +3,9 @@ package Controllers;
  * Created by zalmangagerman on 10/24/17.
  */
 import org.junit.jupiter.api.*;
+
+import Models.PlayerI;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;

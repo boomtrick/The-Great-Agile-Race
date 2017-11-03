@@ -4,6 +4,10 @@ package Controllers;
  */
 
 import org.junit.jupiter.api.*;
+
+import Models.Position;
+import Models.PositionI;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import static Config.BoardConstants.INITIAL_COLUMN;

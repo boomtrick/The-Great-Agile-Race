@@ -11,6 +11,11 @@ import java.util.Random;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import Config.BoardConstants.TeamColor;
+import Models.Player;
+import Models.PlayerI;
+import Models.Position;
+import Models.PositionI;
+
 import static Config.BoardConstants.TeamColor.*;
 
 public class PlayerTest {

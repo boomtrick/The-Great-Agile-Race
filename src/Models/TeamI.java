@@ -1,7 +1,6 @@
 package Models;
 
 import Config.BoardConstants.TeamColor;
-import Controllers.PlayerI;
 
 import java.util.List;
 
