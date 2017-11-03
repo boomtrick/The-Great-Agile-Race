@@ -82,7 +82,11 @@ public class GameBoard extends JFrame implements ActionListener{
 		this.txtBlueTeam = new JLabel("Blue Team");
 		this.txtRedTeam = new JLabel("Red Team");
 
-		setUpTeams();
+		//Create labels for player names
+				for (int i = 0; i <= 6; i++){
+					lblPlayersBlue.add(i, new JLabel("<Empty Slot>"));
+					lblPlayersRed.add(i, new JLabel("<Empty Slot>"));
+				}
 
 		//Makes layout vertical
 		panelIn.setLayout(new BoxLayout(panelIn, BoxLayout.Y_AXIS));
@@ -107,49 +111,14 @@ public class GameBoard extends JFrame implements ActionListener{
 		return panelIn;
 
 	}
-	
-	private JComponent updateSidePanel()
-	{
-		JComponent panelIn = new JPanel();
-		this.btnStartGame = new JButton("Start Game");
-		this.btnAddPlayerRed = new JButton("Add Player");
-		this.btnAddPlayerBlue = new JButton("Add Player");
 
-		this.txtBlueTeam = new JLabel("Blue Team");
-		this.txtRedTeam = new JLabel("Red Team");
-
-		//Makes layout vertical
-		panelIn.setLayout(new BoxLayout(panelIn, BoxLayout.Y_AXIS));
-		panelIn.add(txtBlueTeam);
-
-		for (JLabel player : lblPlayersBlue){
-			panelIn.add(player);
-		}
-
-		panelIn.add(btnAddPlayerBlue);
-		panelIn.add(txtRedTeam);
-
-		for (JLabel player : lblPlayersRed){
-			panelIn.add(player);
-		}
-		panelIn.add(btnAddPlayerRed);
-		panelIn.add(btnStartGame);
-		
-		return panelIn;
-	}
-
-	/**
-	 *  This updates board whenever a change occurs.
-	 */
-	private void updateBoard()
-	{
-	
+	public void actionPerformed(ActionEvent event){
+		buttonEvent(event);
 		frame.repaint();
 	}
-	
-	public void actionPerformed(ActionEvent event){
+
+	private void buttonEvent(ActionEvent event) {
 		JButton button = (JButton) event.getSource();
-		//}
 		if(button.equals(btnAddPlayerRed)){
 			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");
 			if (!name.isEmpty()){
@@ -165,37 +134,33 @@ public class GameBoard extends JFrame implements ActionListener{
 					}
 					
 				}
-				
-				updateBoard();
-
 			}
 
 		}
 		if(button.equals(btnAddPlayerBlue)){
 			String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
 			if (!name.isEmpty()){
-				//put a new piece on the board
+				for(int i = 0; i < lblPlayersBlue.size(); i++)
+				{
+					if(lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
+					{
+						lblPlayersBlue.get(i).setText(name);
+						//TO DO add player to board controller.
+						break;
+					}
+					
+				}
 
 			}
 		}
 	}
 	
-	
-	private void setUpTeams()
-	{
-		//Create labels for player names
-		for (int i = 0; i <= 6; i++){
-			lblPlayersBlue.add(i, new JLabel("<Empty Slot>"));
-			lblPlayersRed.add(i, new JLabel("<Empty Slot>"));
-		}
-	}
 	private BufferedImage getImage()
 	{
 		BufferedImage img = null;
 	    
 		try 
 		{ 
-			//img = ImageIO.read(new File("C:\\Users\\Mark\\Documents\\The-Great-Agile-Race\\src\\Views\\Images\\board.png"));
 	         img = ImageIO.read(new File("src/Views/Images/board.png"));
 	         System.out.println("image found");
 	     } 
@@ -205,9 +170,5 @@ public class GameBoard extends JFrame implements ActionListener{
 		
 		return img;
 	
-	}
-
-	private void createUIComponents() {
-		// TODO: place custom component creation code here
 	}
 }
