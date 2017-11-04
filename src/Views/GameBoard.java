@@ -20,7 +20,7 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	private BoardController boardController;
 	private JFrame frame = new JFrame("The Great Agile Race");
-	private JPanel board = null;
+	private Board board = null;
 	private JButton btnStartGame = null;
 	private JLabel txtBlueTeam = null;
 	private JLabel txtRedTeam;
@@ -67,10 +67,10 @@ public class GameBoard extends JFrame implements ActionListener{
 	}
 
 
-	public JPanel buildBoard(int height , int width)
+	public Board buildBoard(int height , int width)
 	{
 
-		JPanel board = new Board(height,width, this.getImage());
+		Board board = new Board(height,width, this.getImage());
 		return board;
 
 	}
@@ -134,7 +134,17 @@ public class GameBoard extends JFrame implements ActionListener{
 					if(lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
 					{
 						lblPlayersRed.get(i).setText(name);
-						//TO DO add player to board controller.
+						Player player = null;
+						
+						try {
+							player = new Player (name, ImageIO.read(new File("src/Views/Images/red-piece_1.png")), i,TeamColor.RED);
+						
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+						board.initPieces(player);
 						break;
 					}
 					
@@ -150,7 +160,19 @@ public class GameBoard extends JFrame implements ActionListener{
 					if(lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
 					{
 						lblPlayersBlue.get(i).setText(name);
-						//TO DO add player to board controller.
+						
+						Player player = null;
+						
+						try {
+							player = new Player (name, ImageIO.read(new File("src/Views/Images/blue-piece.png")), i,TeamColor.BLUE);
+						
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+						board.initPieces(player);
+						
 						break;
 					}
 					
@@ -158,9 +180,6 @@ public class GameBoard extends JFrame implements ActionListener{
 
 			}
 		}
-
-
-
 
 		/*Look at what's been filled in and create board base d on that*/
 		if(button.equals(btnStartGame)){

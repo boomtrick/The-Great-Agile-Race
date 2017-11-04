@@ -43,8 +43,20 @@ public class Board extends JPanel {
 				g.drawImage(player.getPlayerPiece(), 0, 0, null);
 			}
 		};
-		tiles[0][0].setDrawable(d);
+		tiles[9][0].setDrawable(d);
 
+	}
+	
+	public void drawTiles()
+	{
+		for(int i = 0 ; i < rows; i++)
+		{
+			for (int j = 0; j < cols; j++)
+			{
+				
+				
+			}
+		}
 	}
 	private void populateBoard() {
 		for(int i = 0 ; i < rows; i++)
