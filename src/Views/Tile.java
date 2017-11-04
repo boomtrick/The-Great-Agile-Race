@@ -11,12 +11,16 @@ import java.awt.*;
 public class Tile extends JPanel {
 
 	private IDrawable drawable;
+	//update to hold more than one drawable
+	//update to be a border layout
 
 	public Tile()
 	{
+		this.setLayout(new BorderLayout());
 		this.setOpaque(false);
 		this.setBorder(BorderFactory.createLineBorder(Color.BLACK) );
 		this.setPreferredSize(new Dimension(50,50) );
+
 	}
 	
 	public Tile(IDrawable drawable) {
