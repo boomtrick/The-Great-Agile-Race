@@ -19,7 +19,6 @@ import java.util.List;
 public class GameBoard extends JFrame implements ActionListener{
 
 	private BoardController boardController;
-	private Team team;
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
 	private JButton btnStartGame = null;
@@ -111,6 +110,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		//Add listeners here for side panel
 		btnAddPlayerBlue.addActionListener(this);
 		btnAddPlayerRed.addActionListener(this);
+		btnStartGame.addActionListener(this::buttonEvent);
 		return panelIn;
 
 	}
@@ -145,12 +145,6 @@ public class GameBoard extends JFrame implements ActionListener{
 		}
 		if(button.equals(btnAddPlayerBlue)){
 			String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
-
-//if no new players were created yet, make a team
-			if(lblPlayersBlue.get(0).getText().equals("<Empty Slot>")) {
-				team = new Team(TeamColor.BLUE);
-			}
-
 			if (!name.isEmpty()){
 				for(int i = 0; i < lblPlayersBlue.size(); i++)
 				{
@@ -169,6 +163,7 @@ public class GameBoard extends JFrame implements ActionListener{
 
 
 
+		/*Look at what's been filled in and create board base d on that*/
 		if(button.equals(btnStartGame)){
 
 			//create the teams
@@ -176,9 +171,34 @@ public class GameBoard extends JFrame implements ActionListener{
 
 			//check how many names were filled in
 			//save that count
-			if(!lblPlayersBlue.get(0).getText().equals("<Empty Slot>")) {
-				team = new Team(TeamColor.BLUE);
+
+			//Count for blue
+			int bluePlayerCount = 0;
+			for(int i = 0; i < lblPlayersBlue.size(); i++)
+			{
+				if(!lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
+				{
+					bluePlayerCount++;
+				}
 			}
+			//Count for red
+			int redPlayerCount = 0;
+			for(int i = 0; i < lblPlayersRed.size(); i++)
+			{
+				if(!lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
+				{
+					bluePlayerCount++;
+				}
+			}
+			//create team
+
+			Team blueTeam = new Team(TeamColor.BLUE, bluePlayerCount);
+			Team redTeam = new Team(TeamColor.RED, redPlayerCount);
+
+			System.out.println(bluePlayerCount);
+			System.out.println(redPlayerCount);
+
+			//init pieces
 
 
 		}
