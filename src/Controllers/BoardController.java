@@ -4,8 +4,11 @@ package Controllers;
  */
 
 import Config.BoardConstants;
+import Models.Player;
 import Models.PlayerI;
+import Models.Team;
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 public class BoardController implements BoardI {
@@ -14,6 +17,7 @@ public class BoardController implements BoardI {
     private final List<TileI> tiles_;
     private final int rowSize_;
     private final int colSize_;
+    private int playerCount_;
 
     public BoardController(int rowSize, int colSize, List<PlayerI> players) {
         assert rowSize > 0;
@@ -37,22 +41,33 @@ public class BoardController implements BoardI {
     @Override
     public boolean movePlayerToTile(PlayerI player, int row, int column) throws MoveException {
 
-            for (TileI tile : tiles_) {
-                if (tile.has(player) && tile.getCol() != column && tile.getRow() != row) {
-                    try { tile.deletePlayer(player); }
-                    catch (PlayerNotFoundException pnfe) { // todo do something
-                    }
-                    for (TileI tile2 : tiles_) {
-                        if (tile2.getCol() == column && tile2.getRow() == row) {
-                            tile2.insertPlayer(player);
-                            return tile2.hasEvent();
-                        }
+        for (TileI tile : tiles_) {
+            if (tile.has(player) && tile.getCol() != column && tile.getRow() != row) {
+                try { tile.deletePlayer(player); }
+                catch (PlayerNotFoundException pnfe) { // todo do something
+                }
+                for (TileI tile2 : tiles_) {
+                    if (tile2.getCol() == column && tile2.getRow() == row) {
+                        tile2.insertPlayer(player);
+                        return tile2.hasEvent();
                     }
                 }
             }
+        }
         return false;
     }
 
+    public Player addPlayer(String nameIn, Team teamIn, int id) {
+
+
+
+        Player newPlayer = new Player(nameIn, teamIn.getGamePiece(),id, teamIn.getColor());
+        //sets the player
+        players_.set(playerCount_, newPlayer);
+       playerCount_++;
+       //initialize player at the first tile
+        return newPlayer;
+    }
     @Override
     public int getRowSize() {
         return rowSize_;
