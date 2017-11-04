@@ -137,13 +137,13 @@ public class GameBoard extends JFrame implements ActionListener{
 						Player player = null;
 						
 						try {
-							player = new Player (name, ImageIO.read(new File("src/Views/Images/red-piece_1.png")), i,TeamColor.RED);
+							player = new Player (name, ImageIO.read(new File("src/Views/Images/red-piece.png")), i,TeamColor.RED);
 						
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-						
+
 						board.initPieces(player);
 						break;
 					}
