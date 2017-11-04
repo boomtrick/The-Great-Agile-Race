@@ -4,7 +4,9 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import Config.BoardConstants.TeamColor;
+import Controllers.BoardController;
 import Models.Player;
+import Models.Team;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +18,8 @@ import java.util.List;
 
 public class GameBoard extends JFrame implements ActionListener{
 
+	private BoardController boardController;
+	private Team team;
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private JPanel board = null;
 	private JButton btnStartGame = null;
@@ -29,7 +33,6 @@ public class GameBoard extends JFrame implements ActionListener{
 	private JComponent filledSidePanel;
 
 	public GameBoard(){
-
 	}
 	
 	public void run(){
@@ -119,6 +122,9 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	private void buttonEvent(ActionEvent event) {
 		JButton button = (JButton) event.getSource();
+
+
+
 		if(button.equals(btnAddPlayerRed)){
 			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");
 			if (!name.isEmpty()){
@@ -139,6 +145,12 @@ public class GameBoard extends JFrame implements ActionListener{
 		}
 		if(button.equals(btnAddPlayerBlue)){
 			String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
+
+//if no new players were created yet, make a team
+			if(lblPlayersBlue.get(0).getText().equals("<Empty Slot>")) {
+				team = new Team(TeamColor.BLUE);
+			}
+
 			if (!name.isEmpty()){
 				for(int i = 0; i < lblPlayersBlue.size(); i++)
 				{
@@ -153,8 +165,26 @@ public class GameBoard extends JFrame implements ActionListener{
 
 			}
 		}
+
+
+
+
+		if(button.equals(btnStartGame)){
+
+			//create the teams
+			//create the players
+
+			//check how many names were filled in
+			//save that count
+			if(!lblPlayersBlue.get(0).getText().equals("<Empty Slot>")) {
+				team = new Team(TeamColor.BLUE);
+			}
+
+
+		}
 	}
-	
+
+
 	private BufferedImage getImage()
 	{
 		BufferedImage img = null;
