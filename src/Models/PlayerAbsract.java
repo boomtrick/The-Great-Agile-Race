@@ -2,8 +2,14 @@ package Models;
 
 import Config.BoardConstants.TeamColor;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import static Config.BoardConstants.TeamColor.BLUE;
+import static Config.BoardConstants.TeamColor.RED;
 
 /**
  * 
@@ -29,6 +35,28 @@ public abstract class PlayerAbsract implements PlayerI  {
 		playerPosition= startingPosition();
 	}
 
+	public BufferedImage getGamePiece(){
+		BufferedImage img = null;
+
+		try
+		{
+			if (side == RED){//return red image
+
+				img = ImageIO.read(new File("src/Views/Images/red-piece.png"));
+
+			} else if (side == BLUE){
+
+				img = ImageIO.read(new File("src/Views/Images/blue-piece.png"));
+			}
+
+			System.out.println("image found");
+		}
+		catch (IOException e) {
+			System.out.println("No image found");
+		}
+
+		return img;
+	}
 	@Override
 	public void move(int i, int j) {
 		playerPosition.setPosition(i, j);
@@ -50,7 +78,7 @@ public abstract class PlayerAbsract implements PlayerI  {
 	}
 
 	@Override
-	public Image getPlayerPiece() {
+	public BufferedImage getPlayerPiece() {
 		return playerPiece;
 	}
 

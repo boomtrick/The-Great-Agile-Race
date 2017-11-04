@@ -128,7 +128,6 @@ public class GameBoard extends JFrame implements ActionListener{
 		if(button.equals(btnAddPlayerRed)){
 			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");
 			if (!name.isEmpty()){
-				//put a new piece on the board
 				
 				for(int i = 0; i < lblPlayersRed.size(); i++)
 				{
@@ -198,8 +197,7 @@ public class GameBoard extends JFrame implements ActionListener{
 			System.out.println(bluePlayerCount);
 			System.out.println(redPlayerCount);
 
-			//init pieces
-
+			//need to initialize pieces
 
 		}
 	}

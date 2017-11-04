@@ -65,6 +65,7 @@ public class BoardController implements BoardI {
         //sets the player
         players_.set(playerCount_, newPlayer);
        playerCount_++;
+       //initialize player at the first tile
         return newPlayer;
     }
     @Override

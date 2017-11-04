@@ -7,6 +7,9 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
+
+import Controllers.IDrawable;
+import Models.Player;
 import Views.Tile;
 
 public class Board extends JPanel {
@@ -33,6 +36,16 @@ public class Board extends JPanel {
 	    populateBoard();
 	}
 
+	public void initPieces(Player player){
+		IDrawable d = new IDrawable() {
+			@Override
+			public void draw(Graphics g) {
+				g.drawImage(player.getPlayerPiece(), 0, 0, null);
+			}
+		};
+		tiles[0][0].setDrawable(d);
+
+	}
 	private void populateBoard() {
 		for(int i = 0 ; i < rows; i++)
 		{
@@ -48,6 +61,7 @@ public class Board extends JPanel {
 	@Override
 	public void paintComponent(Graphics page)
 	{
+
 		page.drawImage(img, 0, 0, null);
 	}
 }
