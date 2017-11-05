@@ -140,6 +140,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		}
 		panelIn.add(btnAddPlayerRed);
 		panelIn.add(btnStartGame);
+		panelIn.add(btnRollDice);
 
 		//Adds in the game log
 		panelIn.add(scroll);
@@ -228,6 +229,10 @@ public class GameBoard extends JFrame implements ActionListener{
 		if(button.equals(btnStartGame)){
 
 			SetupGame();
+
+			gameLog.append("Game START.\n");
+			btnAddPlayerBlue.setVisible(false);
+			btnAddPlayerRed.setVisible(false);
 
 		}
 	}
