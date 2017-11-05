@@ -7,6 +7,7 @@ import Config.BoardConstants.TeamColor;
 import Controllers.BoardController;
 import Models.Fact;
 import Models.Player;
+import Models.PlayerI;
 import Models.Team;
 
 import java.awt.event.ActionEvent;
@@ -20,17 +21,19 @@ import java.util.Random;
 
 public class GameBoard extends JFrame implements ActionListener{
 
-	private BoardController boardController;
+	private BoardController gameMaster;
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private Board board = null;
-	private JButton btnStartGame = null;
 
 	private JTextArea gameLog;
 	private JScrollPane scroll;
 	private JLabel txtBlueTeam = null;
 	private JLabel txtRedTeam;
-	private JButton btnAddPlayerRed;
+
+	private JButton btnRollDice;
 	private JButton btnAddPlayerBlue;
+	private JButton btnAddPlayerRed;
+	private JButton btnStartGame = null;
 	private List<JLabel> lblPlayersBlue = new ArrayList<JLabel>();
 	private List<JLabel> lblPlayersRed = new ArrayList<JLabel>();
 	private JSplitPane pane;
@@ -107,6 +110,8 @@ public class GameBoard extends JFrame implements ActionListener{
 		this.scroll = new JScrollPane(gameLog);
 
 		this.btnStartGame = new JButton("Start Game");
+		this.btnRollDice = new JButton("Roll Dice");
+		this.btnRollDice.setVisible(false);
 		this.btnAddPlayerRed = new JButton("Add Player");
 		this.btnAddPlayerBlue = new JButton("Add Player");
 
@@ -154,7 +159,8 @@ public class GameBoard extends JFrame implements ActionListener{
 	private void buttonEvent(ActionEvent event) {
 		JButton button = (JButton) event.getSource();
 
-
+		List<Player> redPlayers = new ArrayList<Player>();
+		List<Player> bluePlayers = new ArrayList<Player>();
 
 		if(button.equals(btnAddPlayerRed)){
 			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");
@@ -166,12 +172,15 @@ public class GameBoard extends JFrame implements ActionListener{
 					{
 						lblPlayersRed.get(i).setText(name);
 						Player player = null;
-						
-						try {
-							player = new Player (name, ImageIO.read(new File("src/Views/Images/red-piece.png")), i,TeamColor.RED);
 
+						try {
+							//Get the piece, set the player
+							player = new Player (name, ImageIO.read(new File("src/Views/Images/red-piece.png")), i,TeamColor.RED);
+							//log it
+							redPlayers.add(i, player);
 							gameLog.append(name +" added to Red Team.\n");
 
+							//	System.out.println(redPlayers.get(i).getPlayerName()+ " is added to the blue team internally");
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -187,6 +196,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		}
 		if(button.equals(btnAddPlayerBlue)){
 			String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
+
 			if (!name.isEmpty()){
 				for(int i = 0; i < lblPlayersBlue.size(); i++)
 				{
@@ -198,8 +208,9 @@ public class GameBoard extends JFrame implements ActionListener{
 						
 						try {
 							player = new Player (name, ImageIO.read(new File("src/Views/Images/blue-piece.png")), i,TeamColor.BLUE);
-
+							bluePlayers.add(i, player);
 							gameLog.append(name +" added to Blue Team.\n");
+							//System.out.println(bluePlayers.get(i).getPlayerName()+ " is added to the blue team internally");
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -209,53 +220,53 @@ public class GameBoard extends JFrame implements ActionListener{
 						
 						break;
 					}
-					
 				}
-
 			}
 		}
 
 		/*Look at what's been filled in and create board base d on that*/
 		if(button.equals(btnStartGame)){
 
-			//create the teams
-			//create the players
-
-			//check how many names were filled in
-			//save that count
-
-			//Count for blue
-			int bluePlayerCount = 0;
-			for(int i = 0; i < lblPlayersBlue.size(); i++)
-			{
-				if(!lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
-				{
-					bluePlayerCount++;
-
-
-				}
-			}
-			//Count for red
-			int redPlayerCount = 0;
-			for(int i = 0; i < lblPlayersRed.size(); i++)
-			{
-				if(!lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
-				{
-					bluePlayerCount++;
-				}
-			}
-			//create team
-
-			Team blueTeam = new Team(TeamColor.BLUE, bluePlayerCount);
-			Team redTeam = new Team(TeamColor.RED, redPlayerCount);
-
-			System.out.println(bluePlayerCount);
-			System.out.println(redPlayerCount);
-
-			triggerRandomFact();
-			//need to initialize pieces
+			SetupGame();
 
 		}
+	}
+
+	private void SetupGame() {
+
+		int bluePlayerCount = 0;
+		for(int i = 0; i < lblPlayersBlue.size(); i++)
+		{
+			if(!lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
+			{
+				bluePlayerCount++;
+
+
+			}
+		}
+		//Count for red
+		int redPlayerCount = 0;
+		for(int i = 0; i < lblPlayersRed.size(); i++)
+		{
+			if(!lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
+			{
+				redPlayerCount++;
+			}
+		}
+		//create team
+
+		//Team blueTeam = new Team(TeamColor.BLUE, bluePlayers);
+		Team redTeam = new Team(TeamColor.RED, redPlayerCount);
+
+		System.out.println(bluePlayerCount);
+		System.out.println(redPlayerCount);
+
+
+
+		triggerRandomFact();
+		//Hide startgame button
+		btnStartGame.setVisible(false);
+		btnRollDice.setVisible(true);
 	}
 
 

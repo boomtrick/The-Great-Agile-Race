@@ -18,6 +18,7 @@ public class Board extends JPanel {
 	private int cols;
 	private Image img;
 
+
 	public Board(int rows, int cols,Image img)
 	{
 		this.img = img;

@@ -11,6 +11,7 @@ import Models.Team;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
+/*This controller is the game master*/
 public class BoardController implements BoardI {
 
     private final List<PlayerI> players_;
