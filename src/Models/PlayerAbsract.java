@@ -3,10 +3,10 @@ package Models;
 import Config.BoardConstants.TeamColor;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static Config.BoardConstants.TeamColor.BLUE;
 import static Config.BoardConstants.TeamColor.RED;
@@ -26,6 +26,7 @@ public abstract class PlayerAbsract implements PlayerI  {
 	private final int playerID;
 	private PositionI playerPosition;
 	private final TeamColor side;
+	private ArrayList<Integer> knownFactIDs;
 
 	public PlayerAbsract(String name, BufferedImage image, int id, TeamColor team) {
 		playerName=name;
@@ -82,6 +83,20 @@ public abstract class PlayerAbsract implements PlayerI  {
 		return playerPiece;
 	}
 
+
+	@Override
+	public void rememberFact(Fact factIn){
+		knownFactIDs.add(factIn.getId());
+	}
+
+	@Override
+	public boolean checkIfKnowsFact(Fact factIn) {
+		//if player knows fact
+		if(knownFactIDs.contains(factIn.getId())){
+			return true;
+		}
+		return false;
+	}
 
 	@Override
 	public PositionI getPlayerPosition() {
