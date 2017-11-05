@@ -5,6 +5,7 @@ import javax.swing.*;
 
 import Config.BoardConstants.TeamColor;
 import Controllers.BoardController;
+import Models.Fact;
 import Models.Player;
 import Models.Team;
 
@@ -15,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class GameBoard extends JFrame implements ActionListener{
 
@@ -78,6 +80,17 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	}
 
+	//Shows a fact that's randomized
+	public void triggerRandomFact(){
+		Random rand = new Random();
+
+		int  n = rand.nextInt(25) + 1;
+		Fact newFact = new Fact(n);
+		JOptionPane.showMessageDialog(frame,
+				newFact.getText());
+
+
+	}
 	public JComponent buildSidePanel(JComponent panelIn){
 
 
@@ -228,6 +241,7 @@ public class GameBoard extends JFrame implements ActionListener{
 			System.out.println(bluePlayerCount);
 			System.out.println(redPlayerCount);
 
+			triggerRandomFact();
 			//need to initialize pieces
 
 		}

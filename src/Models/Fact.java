@@ -10,10 +10,14 @@ public class Fact implements SpecialEvent {
 
 
 
-	public Fact(int id, String text)
+	public Fact(int id)
 	{
+
+		DialogueParser dp = new DialogueParser();
+		Response response = dp.getResponse();
+
 		this.id = id;
-		this.text = text;
+		this.text =  response.getFactByID(id);
 	}
 
 	public Fact() {
