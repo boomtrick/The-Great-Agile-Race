@@ -22,6 +22,9 @@ public class GameBoard extends JFrame implements ActionListener{
 	private JFrame frame = new JFrame("The Great Agile Race");
 	private Board board = null;
 	private JButton btnStartGame = null;
+
+	private JTextArea gameLog;
+	private JScrollPane scroll;
 	private JLabel txtBlueTeam = null;
 	private JLabel txtRedTeam;
 	private JButton btnAddPlayerRed;
@@ -78,8 +81,8 @@ public class GameBoard extends JFrame implements ActionListener{
 	public JComponent buildSidePanel(JComponent panelIn){
 
 
-		final JTextArea gameLog = new JTextArea(20,10);
-		final JScrollPane scroll = new JScrollPane(gameLog);
+		this.gameLog = new JTextArea(20,10);
+		this.scroll = new JScrollPane(gameLog);
 
 		this.btnStartGame = new JButton("Start Game");
 		this.btnAddPlayerRed = new JButton("Add Player");
@@ -144,7 +147,9 @@ public class GameBoard extends JFrame implements ActionListener{
 						
 						try {
 							player = new Player (name, ImageIO.read(new File("src/Views/Images/red-piece.png")), i,TeamColor.RED);
-						
+
+							gameLog.append(name +" added to Red Team.\n");
+
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -171,7 +176,8 @@ public class GameBoard extends JFrame implements ActionListener{
 						
 						try {
 							player = new Player (name, ImageIO.read(new File("src/Views/Images/blue-piece.png")), i,TeamColor.BLUE);
-						
+
+							gameLog.append(name +" added to Blue Team.\n");
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
