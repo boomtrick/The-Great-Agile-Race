@@ -13,6 +13,10 @@ public interface PlayerI {
     TeamColor getTeam();
     String getPlayerName();
     Image getPlayerPiece();
+
+    void rememberFact(Fact factIn);
+    boolean checkIfKnowsFact(Fact factIn);
+
     PositionI getPlayerPosition();
     void setPlayerPosition(PositionI playerPosition);
 }

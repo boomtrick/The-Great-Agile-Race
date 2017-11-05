@@ -36,6 +36,10 @@ public class GameBoard extends JFrame implements ActionListener{
 	private JSplitPane pane;
 	private JComponent filledSidePanel;
 
+
+
+
+
 	public GameBoard(){
 	}
 	
@@ -86,8 +90,13 @@ public class GameBoard extends JFrame implements ActionListener{
 
 		int  n = rand.nextInt(25) + 1;
 		Fact newFact = new Fact(n);
-		JOptionPane.showMessageDialog(frame,
-				newFact.getText());
+		//Shows random fact
+		JOptionPane.showMessageDialog(frame, newFact.getText());
+
+
+		//Note that player has seen the fact
+
+
 
 
 	}
@@ -222,6 +231,8 @@ public class GameBoard extends JFrame implements ActionListener{
 				if(!lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
 				{
 					bluePlayerCount++;
+
+
 				}
 			}
 			//Count for red
