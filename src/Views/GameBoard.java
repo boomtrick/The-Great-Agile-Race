@@ -77,6 +77,10 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	public JComponent buildSidePanel(JComponent panelIn){
 
+
+		final JTextArea gameLog = new JTextArea(20,10);
+		final JScrollPane scroll = new JScrollPane(gameLog);
+
 		this.btnStartGame = new JButton("Start Game");
 		this.btnAddPlayerRed = new JButton("Add Player");
 		this.btnAddPlayerBlue = new JButton("Add Player");
@@ -107,6 +111,8 @@ public class GameBoard extends JFrame implements ActionListener{
 		panelIn.add(btnAddPlayerRed);
 		panelIn.add(btnStartGame);
 
+		//Adds in the game log
+		panelIn.add(scroll);
 		//Add listeners here for side panel
 		btnAddPlayerBlue.addActionListener(this);
 		btnAddPlayerRed.addActionListener(this);
