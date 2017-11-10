@@ -1,20 +1,21 @@
-package Test.Models;
+package Models;
 
 import Models.Dice;
 import org.junit.jupiter.api.Test;
 
+import static Config.BoardConstants.DIE_SIZE;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DiceTest {
     @Test
-            public void rollTest(){
-        int low=0;
-        int high=7;
+    public void rollTest() throws Exception {
         int numOfTest=64;
+        Dice actualDie = new Dice();
+        int actualRoll;
         for(int i=0; i<numOfTest; i++){
-            assertTrue((Dice.roll()>low)&(Dice.roll()<high));
-
+            actualRoll = actualDie.roll();
+            assertTrue(actualRoll > 0);
+            assertTrue(actualRoll <= DIE_SIZE);
         }
     }
-
 }

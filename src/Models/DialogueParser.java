@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 /*Parses a JSON file indicated by filePath
 * Returns response for manipulation */
 
-public class DialogueParser {
+public class DialogueParser implements DialogueParserI {
 
     private Response response;
     private String filePath = "src/Config/Dialogue.json";
@@ -20,6 +20,7 @@ public class DialogueParser {
     }
 
     //Use this to get the fields you want
+    @Override
     public Response getResponse() {
         return response;
     }
@@ -44,7 +45,7 @@ public class DialogueParser {
     //Samples to retrieve fields
     public static void main(String[] args)
     {
-        DialogueParser dp = new DialogueParser();
+        DialogueParserI dp = new DialogueParser();
         Response response = dp.getResponse();
 
         //Prints out the first fact

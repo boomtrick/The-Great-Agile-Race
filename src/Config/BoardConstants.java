@@ -14,6 +14,7 @@ public class BoardConstants {
     final public static int RED_IND = 1;
     final public static int INITIAL_ROW = 0;
     final public static int INITIAL_COLUMN = 0;
+    final public static int DIE_SIZE = 6;
 
     public final static boolean[][] spEvSpaces = new boolean[][]
             {       {false, false, true, false, false, true, false},

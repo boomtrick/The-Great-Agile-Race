@@ -1,6 +1,6 @@
 package Models;
 
-public class Fact implements SpecialEvent {
+public class Fact implements FactI {
 	/*
         Holds getters, setters and methods for accessing Fact data
      */
@@ -13,7 +13,7 @@ public class Fact implements SpecialEvent {
 	public Fact(int id)
 	{
 
-		DialogueParser dp = new DialogueParser();
+		DialogueParserI dp = new DialogueParser();
 		Response response = dp.getResponse();
 
 		this.id = id;

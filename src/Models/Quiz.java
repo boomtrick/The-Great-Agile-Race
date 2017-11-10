@@ -6,7 +6,7 @@ import java.util.Map;
 /*
     Holds getters, setters and methods for accessing Quiz data
  */
-public class Quiz implements SpecialEvent {
+public class Quiz implements QuizI {
 
 	private int id;
 	private String question;
@@ -57,7 +57,7 @@ public class Quiz implements SpecialEvent {
 	{
 		return relatedFact;
 	}
-
+	@Override
 	public int getId()
 	{
 		return id;

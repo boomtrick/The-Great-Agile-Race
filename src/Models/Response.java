@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
     are assigned to their corresponding variable name.
     Also holds methods to get by attributes
  */
-public class Response {
+public class Response implements ResponseI {
 
     //Vars
     List<Quiz> Quiz;

@@ -1,21 +1,13 @@
 package Models;
 
-
-
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
-
-
-
-import Models.Fact;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FactTest {
 	
 	int id = 52;
 	String text = "this is fact!!";
-	Fact fact = new Fact(id,text);
+	Fact fact = new Fact(id);
 	
 	@Test
 	public void getText()
