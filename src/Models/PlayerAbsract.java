@@ -85,12 +85,12 @@ public abstract class PlayerAbsract implements PlayerI  {
 
 
 	@Override
-	public void rememberFact(Fact factIn){
+	public void rememberFact(FactI factIn){
 		knownFactIDs.add(factIn.getId());
 	}
 
 	@Override
-	public boolean checkIfKnowsFact(Fact factIn) {
+	public boolean checkIfKnowsFact(FactI factIn) {
 		//if player knows fact
 		if(knownFactIDs.contains(factIn.getId())){
 			return true;

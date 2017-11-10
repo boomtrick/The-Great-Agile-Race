@@ -2,9 +2,7 @@ package Views;
 
 import Config.BoardConstants.TeamColor;
 import Controllers.BoardController;
-import Models.Fact;
-import Models.Player;
-import Models.Team;
+import Models.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -16,6 +14,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import static Config.BoardConstants.COL_SIZE;
+import static Config.BoardConstants.ROW_SIZE;
 
 public class GameBoard extends JFrame implements ActionListener{
 
@@ -41,18 +42,12 @@ public class GameBoard extends JFrame implements ActionListener{
 	private String [] bluePieces;
 	private String [] diceImages;
 
-
-
-
-
-
-
 	public GameBoard(){
 	}
 
 	public void run(){
 
-		board = this.buildBoard(10,7);
+		board = this.buildBoard(COL_SIZE,ROW_SIZE);
 
 		//frame.add(board);
 
@@ -93,20 +88,12 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	//Shows a fact that's randomized
 	public void triggerRandomFact(){
-		Random rand = new Random();
-
-		int  n = rand.nextInt(25) + 1;
-		Fact newFact = new Fact(n);
+		FactI newFact = new Fact(new DialogueParser());
 		//Shows random fact
 		JOptionPane.showMessageDialog(frame, newFact.getText());
-
-
 		//Note that player has seen the fact
-
-
-
-
 	}
+
 	public JComponent buildSidePanel(JComponent panelIn){
 
 
@@ -167,6 +154,8 @@ public class GameBoard extends JFrame implements ActionListener{
 		List<Player> redPlayers = new ArrayList<Player>();
 		List<Player> bluePlayers = new ArrayList<Player>();
 
+		Team redTeam;
+		Team blueTeam;
 
 		if(button.equals(btnAddPlayerRed)){
 			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");

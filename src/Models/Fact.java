@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Random;
+
 public class Fact implements FactI {
 	/*
         Holds getters, setters and methods for accessing Fact data
@@ -10,18 +12,12 @@ public class Fact implements FactI {
 
 
 
-	public Fact(int id)
+	public Fact(DialogueParserI dp)
 	{
-
-		DialogueParserI dp = new DialogueParser();
+		Random rand = new Random();
+		id = rand.nextInt(25) + 1;
 		Response response = dp.getResponse();
-
-		this.id = id;
 		this.text =  response.getFactByID(id);
-	}
-
-	public Fact() {
-		//There should be such a thing as an empty fact // todo
 	}
 
 //
@@ -31,16 +27,20 @@ public class Fact implements FactI {
 //		return false;
 //	}
 
-    public String getText() {
+    @Override
+	public String getText() {
         return text;
     }
+	@Override
 	public int getId()
 	{
 		return id;
 	}
+	@Override
 	public void setId(int id) {
 		this.id = id;
 	}
+	@Override
 	public void setText(String text) {
 		this.text = text;
 	}

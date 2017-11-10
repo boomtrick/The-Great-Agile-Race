@@ -11,23 +11,27 @@ import java.util.NoSuchElementException;
 public class Response implements ResponseI {
 
     //Vars
-    List<Quiz> Quiz;
-    List<Fact> Fact;
+    private List<QuizI> quizzes;
+    private List<FactI> facts;
 
-    //Getters and setters for Fact array
-    public List<Fact> getFact() {
-        return Fact;
+    //Getters and setters for facts array
+    @Override
+    public List<FactI> getFact() {
+        return facts;
     }
-    public void setFact(List<Fact> fact) {
-        this.Fact = fact;
+    @Override
+    public void setFact(List<FactI> fact) {
+        this.facts = fact;
     }
 
-    //Getters and setters for Quiz array
-    public List<Models.Quiz> getQuiz() {
-        return Quiz;
+    //Getters and setters for quizzes array
+    @Override
+    public List<QuizI> getQuiz() {
+        return quizzes;
     }
-    public void setQuiz(List<Models.Quiz> quiz) {
-        Quiz = quiz;
+    @Override
+    public void setQuiz(List<QuizI> quiz) {
+        quizzes = quiz;
     }
 
 
@@ -38,7 +42,7 @@ public class Response implements ResponseI {
     protected String getFactByID(String ID) throws NoSuchElementException {
         int intID = Integer.parseInt(ID);
         String fact;
-        //While we're in the Fact array, iterate
+        //While we're in the facts array, iterate
         for(int i=0; i < getFact().size(); i++){
             //If ID in array, pull it
             if (getFact().get(i).getId() == intID){
@@ -46,7 +50,7 @@ public class Response implements ResponseI {
                 return fact;
             }
         }
-        throw new NoSuchElementException("Fact does not exist given ID");
+        throw new NoSuchElementException("facts does not exist given ID");
     }
 
 
@@ -54,7 +58,7 @@ public class Response implements ResponseI {
     //Returns fact by int ID
     protected String getFactByID(int ID) throws NoSuchElementException{
         String fact;
-        //While we're in the Fact array, iterate
+        //While we're in the facts array, iterate
         for(int i=0; i < getFact().size(); i++){
             //If ID in array, pull it
             if (getFact().get(i).getId() == ID){
@@ -62,13 +66,13 @@ public class Response implements ResponseI {
                 return fact;
             }
         }
-        throw new NoSuchElementException("Fact does not exist given ID");
+        throw new NoSuchElementException("facts does not exist given ID");
     }
 
 
     //Returns quiz object by given int ID
-    protected Quiz getQuizByID(int ID) throws NoSuchElementException{
-        Quiz quiz;
+    protected QuizI getQuizByID(int ID) throws NoSuchElementException{
+        QuizI quiz;
         for(int i=0; i < getQuiz().size(); i++){
             //If ID in array, pull it
             if (getQuiz().get(i).getId() == ID){
@@ -77,14 +81,14 @@ public class Response implements ResponseI {
             }
 
         }
-        throw new NoSuchElementException("Quiz does not exist given ID");
+        throw new NoSuchElementException("quizzes does not exist given ID");
     }
 
     //Returns quiz object by given String ID
-    protected Quiz getQuizByID(String ID) throws NoSuchElementException{
+    protected QuizI getQuizByID(String ID) throws NoSuchElementException{
 
         int intID = Integer.parseInt(ID);
-        Quiz quiz;
+        QuizI quiz;
         for(int i=0; i < getQuiz().size(); i++){
             //If ID in array, pull it
             if (getQuiz().get(i).getId() == intID){
@@ -92,7 +96,7 @@ public class Response implements ResponseI {
                 return quiz;
             }
         }
-        throw new NoSuchElementException("Quiz does not exist given ID");
+        throw new NoSuchElementException("quizzes does not exist given ID");
     }
 
 

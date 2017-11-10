@@ -14,8 +14,8 @@ public interface PlayerI {
     String getPlayerName();
     Image getPlayerPiece();
 
-    void rememberFact(Fact factIn);
-    boolean checkIfKnowsFact(Fact factIn);
+    void rememberFact(FactI factIn);
+    boolean checkIfKnowsFact(FactI factIn);
 
     PositionI getPlayerPosition();
     void setPlayerPosition(PositionI playerPosition);

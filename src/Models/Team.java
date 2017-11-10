@@ -81,10 +81,6 @@ public class Team implements TeamI {
 
     @Override
     public void addPlayer(PlayerI player) {
-        for (int i=0; i<numOfPlayers; i++)
-        {
-            players_.add(player);
-        }
-
+        players_.add(player);
     }
 }

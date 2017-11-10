@@ -26,7 +26,8 @@ public class Quiz implements QuizI {
 	}
 
 	//Checks if answer is correct, returns true or false
-	public boolean isCorrect(String answerIn){//should be a,b,c or d
+	@Override
+    public boolean isCorrect(String answerIn){//should be a,b,c or d
 
         //If answer is correct
 	    if (answerIn.equals(answer)){
@@ -37,11 +38,13 @@ public class Quiz implements QuizI {
 
 
 	
-	public String getAnswer()
+	@Override
+    public String getAnswer()
 	{
 		return answer;
 	}
-	public String getOptions(){
+	@Override
+    public String getOptions(){
 
 		options.put("A", a);
 		options.put("B", b);
@@ -49,11 +52,13 @@ public class Quiz implements QuizI {
 		options.put("D", d);
 	    return Arrays.toString(options.entrySet().toArray());
     }
-	public String getOption(String option)
+	@Override
+    public String getOption(String option)
 	{
 		return options.get(option);
 	}
-	public int getRelatedFact()
+	@Override
+    public int getRelatedFact()
 	{
 		return relatedFact;
 	}
@@ -62,45 +67,57 @@ public class Quiz implements QuizI {
 	{
 		return id;
 	}
-	public String getQuestion()
+	@Override
+    public String getQuestion()
 	{
 		return question;
 	}
-	public void setId(int id) {
+	@Override
+    public void setId(int id) {
 		this.id = id;
 	}
-	public void setQuestion(String question) {
+	@Override
+    public void setQuestion(String question) {
 		this.question = question;
 	}
-	public void setA(String a) {
+	@Override
+    public void setA(String a) {
 		this.a = a;
 	}
-	public void setB(String b) {
+	@Override
+    public void setB(String b) {
 		this.b = b;
 	}
-	public void setC(String c) {
+	@Override
+    public void setC(String c) {
 		this.c = c;
 	}
-	public void setD(String d) {
+	@Override
+    public void setD(String d) {
 		this.d = d;
 	}
-	public void setAnswer(String answer) {
+	@Override
+    public void setAnswer(String answer) {
 		this.answer = answer;
 	}
-	public void setRelatedFact(int relatedFact) {
+	@Override
+    public void setRelatedFact(int relatedFact) {
 		this.relatedFact = relatedFact;
 	}
-
-	public String getA() {
+	@Override
+    public String getA() {
 		return a;
 	}
-	public String getB() {
+	@Override
+    public String getB() {
 		return b;
 	}
-	public String getC() {
+	@Override
+    public String getC() {
 		return c;
 	}
-	public String getD() {
+	@Override
+    public String getD() {
 		return d;
 	}
 
