@@ -38,12 +38,14 @@ public class Board extends JPanel {
 	}
 
 	public void initPieces(BufferedImage playerPiece){
+		int x = (int) (Math.random() * (60 - 0)) + 0;
+		int y = (int) (Math.random() * (40 - 0)) + 0;
 		IDrawable d = new IDrawable() {
 			@Override
 			public void draw(Graphics g) {
-				g.drawImage(playerPiece, 0, 0, null);
+				g.drawImage(playerPiece, x, y, null);
 			}
-		};
+    	};
 		tiles[9][0].setDrawable(d);
 
 	}
