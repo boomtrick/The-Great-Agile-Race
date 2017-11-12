@@ -1,6 +1,7 @@
 package Views;
 
 import Controllers.IDrawable;
+import Models.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,14 +13,8 @@ import java.util.ArrayList;
  */
 public class Tile extends JPanel {
 
-	private IDrawable drawP1;
-	private IDrawable drawP2;
-	private IDrawable drawP3;
-	private IDrawable drawP4;
-	private IDrawable drawP5;
-	//update to hold more than one drawable
-	//update to be a border layout
 	private ArrayList<IDrawable> drawables = new ArrayList<IDrawable>();
+	private ArrayList<Player> players = new ArrayList<Player>();
 	public Tile()
 	{
 		this.setLayout(new GridLayout());
@@ -31,24 +26,21 @@ public class Tile extends JPanel {
 	
 	public Tile(IDrawable drawable) {
 		this();
-		this.drawP2 = drawable;
+		drawables.add(drawable);
     }
 	
 
-    public void setDrawable(IDrawable d) {
-		drawables.add(d);
+    public void setDrawable(Player p) {
+		players.add(p);
         repaint();
     }
 
     @Override
 	public void paintComponent(Graphics g) {
-		//if(drawP1 != null){
-		//	drawP1.draw(g);
-		//}
-    	int i = 0;
-    	for(IDrawable draw : drawables)
-    	{	
-    		draw.draw(g);
+    	
+    	for(Player playa : players)
+    	{
+    		playa.draw(g);
     	}
 	}
 }

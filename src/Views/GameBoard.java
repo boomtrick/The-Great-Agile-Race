@@ -44,6 +44,8 @@ public class GameBoard extends JFrame implements ActionListener{
 
     private final String EMPTY_SLOT = "<EMPTY SLOT>";
 
+	List<Player> redPlayers = new ArrayList<Player>();
+	List<Player> bluePlayers = new ArrayList<Player>();
 	public GameBoard(){
 	}
 
@@ -153,8 +155,6 @@ public class GameBoard extends JFrame implements ActionListener{
 	private void buttonEvent(ActionEvent event) {
 		JButton button = (JButton) event.getSource();
 
-		List<Player> redPlayers = new ArrayList<Player>();
-		List<Player> bluePlayers = new ArrayList<Player>();
 
 		TeamI redTeam = new Team(TeamColor.RED);
 		TeamI blueTeam = new Team(TeamColor.BLUE);
@@ -166,7 +166,9 @@ public class GameBoard extends JFrame implements ActionListener{
 					if(lblPlayersRed.get(i).getText().equals(EMPTY_SLOT)) {
 						lblPlayersRed.get(i).setText(name);
                         gameLog.append(name +" added to Red Team.\n");
-						board.initPieces(redTeam.addPlayerByName(name, i));
+                        Player newPlayer = new Player(name,i, TeamColor.RED,redPlayers.size());
+                        redPlayers.add(newPlayer);
+						board.initPieces(newPlayer);
 						break;
                     } } } }
 
@@ -178,7 +180,10 @@ public class GameBoard extends JFrame implements ActionListener{
 					if(lblPlayersBlue.get(i).getText().equals(EMPTY_SLOT))  {
 						lblPlayersBlue.get(i).setText(name);
                         gameLog.append(name +" added to Blue Team.\n");
-						board.initPieces(blueTeam.addPlayerByName(name, i));
+                        Player newPlayer = new Player(name,i, TeamColor.BLUE,bluePlayers.size());
+                        bluePlayers.add(newPlayer);
+						board.initPieces(newPlayer);
+						//board.initPieces(blueTeam.addPlayerByName(name, i));
 						break;
                     } } } }
 

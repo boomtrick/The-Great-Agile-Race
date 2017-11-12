@@ -1,8 +1,11 @@
 package Models;
 
 import Config.BoardConstants.TeamColor;
+import Controllers.IDrawable;
 
 import javax.imageio.ImageIO;
+
+import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +26,7 @@ import static Config.BoardConstants.TeamColor.RED;
  * When object is created, its position is set to 0,0 before rolling dice. Therefore, it can not be seen before rolling dice
  *
  */
-public class Player implements PlayerI {
+public class Player implements PlayerI, IDrawable {
 
 	private final String playerName;
 	private BufferedImage playerPiece;
@@ -106,6 +109,15 @@ public class Player implements PlayerI {
 
 	public static PositionI startingPosition() {
 		return new Position();
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		
+		int x = (int) (Math.random() * (60 - 0)) + 0;
+		int y = (int) (Math.random() * (40 - 0)) + 0;
+		g.drawImage(playerPiece, x, y, null);
+		
 	}
 
 
