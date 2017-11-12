@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.Random;
 public class Fact {
 	/*
         Holds getters, setters and methods for accessing Fact

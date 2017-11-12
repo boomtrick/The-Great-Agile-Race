@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cb78fc5-e53f-485e-af79-c6a697edebf6" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/test/Models/QuestionTest.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Position.java" afterPath="$PROJECT_DIR$/src/Models/Position.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Quiz.java" afterPath="$PROJECT_DIR$/src/Models/Quiz.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/Controllers/PositionTest.java" afterPath="$PROJECT_DIR$/test/Controllers/PositionTest.java" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Fact.java" afterPath="$PROJECT_DIR$/src/Models/Fact.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Views/GameBoard.java" afterPath="$PROJECT_DIR$/src/Views/GameBoard.java" />
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/Test/" />
@@ -29,6 +35,7 @@
     <favorites_list name="The-Great-Agile-Race" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.47322297">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -136,12 +143,123 @@
         </leaf>
       </split-second>
     </splitter>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Fact.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Fact.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Response.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Response.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <marker date="1510518732808" expanded="true" signature="2658:2691" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameBoard.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Views/GameBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dice.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Dice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardConstants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Config/BoardConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiceI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/DiceI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FactI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/FactI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/PlayerI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="The-Great-Agile-Race.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/The-Great-Agile-Race.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>boardcontr</find>
       <find>board</find>
       <find>trigger</find>
+      <find>dice</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,6 +282,7 @@
         <option value="$PROJECT_DIR$/src/Controllers/BoardController.java" />
         <option value="$PROJECT_DIR$/The-Great-Agile-Race.iml" />
         <option value="$PROJECT_DIR$/src/Controllers/IDrawable.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/Views/GameBoard.java" />
         <option value="$PROJECT_DIR$/src/Models/Fact.java" />
         <option value="$PROJECT_DIR$/src/Models/Response.java" />
@@ -172,6 +291,12 @@
         <option value="$PROJECT_DIR$/test/Models/QuizTest.java" />
         <option value="$PROJECT_DIR$/src/Models/Position.java" />
         <option value="$PROJECT_DIR$/test/Controllers/PositionTest.java" />
+=======
+        <option value="$PROJECT_DIR$/src/Models/Quiz.java" />
+        <option value="$PROJECT_DIR$/src/Models/Response.java" />
+        <option value="$PROJECT_DIR$/src/Models/Fact.java" />
+        <option value="$PROJECT_DIR$/src/Views/GameBoard.java" />
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
       </list>
     </option>
   </component>
@@ -247,7 +372,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,6 +493,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1133,8 +1262,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29700854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1183,6 +1316,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/The-Great-Agile-Race.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Fact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1340,6 +1499,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/jre/lib/rt.jar!/javax/swing/plaf/basic/BasicButtonListener.class" />
     <entry file="file://$PROJECT_DIR$/src/Models/DiceI.java" />
     <entry file="file://$PROJECT_DIR$/src/Models/Dice.java">
@@ -1349,6 +1509,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
     <entry file="file://$PROJECT_DIR$/src/Models/DialogueParserI.java" />
     <entry file="file://$PROJECT_DIR$/src/Config/Dialogue.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -1357,6 +1519,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1364,6 +1527,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
     <entry file="file://$PROJECT_DIR$/src/Views/ReadMe.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1412,6 +1577,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Views/GameBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="695">
@@ -1420,6 +1586,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
     <entry file="file://$PROJECT_DIR$/src/Models/ResponseI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1474,6 +1642,7 @@
         <state relative-caret-position="975">
           <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#417#432#0" expanded="false" />
             <element signature="e#764#765#0" expanded="false" />
@@ -1510,10 +1679,14 @@
             <element signature="e#2030#2031#0" expanded="false" />
             <element signature="e#2082#2083#0" expanded="false" />
             <element signature="e#2113#2114#0" expanded="false" />
+=======
+            <marker date="1510518732808" expanded="true" signature="2658:2691" ph="{...}" />
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Config/BoardConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1523,6 +1696,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Position.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/Models/FactI.java">
+>>>>>>> 63cb7e5ae17e1ff99fc8563a4073524d3771cb67
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
@@ -1542,6 +1718,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/DiceI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Dice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config/BoardConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Fact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Views/GameBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
           <folding />
         </state>
       </provider>
