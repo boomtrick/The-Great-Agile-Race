@@ -58,6 +58,7 @@ public class BoardController implements BoardI {
         return false;
     }
 
+    /*
     public Player addPlayer(String nameIn, Team teamIn, int id) {
 
 
@@ -68,7 +69,7 @@ public class BoardController implements BoardI {
        playerCount_++;
        //initialize player at the first tile
         return newPlayer;
-    }
+    } */
     @Override
     public int getRowSize() {
         return rowSize_;

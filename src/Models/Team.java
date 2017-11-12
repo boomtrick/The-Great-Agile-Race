@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static Config.BoardConstants.TeamColor.BLUE;
 import static Config.BoardConstants.TeamColor.RED;
@@ -20,17 +21,11 @@ public class Team implements TeamI {
  */
     private final TeamColor color_;
     private List<PlayerI> players_;
-    private int numOfPlayers;
 
-    public Team (TeamColor color, int teamSize){
-        color_=color;
-        numOfPlayers=teamSize;
-    }
 
     public Team(TeamColor color) {
         this(color, new ArrayList<PlayerI>());
     }
-
 
     //Returns game piece based on team color
     public BufferedImage getGamePiece(){
@@ -69,13 +64,17 @@ public class Team implements TeamI {
     }
 
     @Override
-    public List<PlayerI> getPlayers() throws NotImplementedException {
+    public List<PlayerI> getPlayers() {
+        List<PlayerI> ret = new ArrayList<>();
+        for (PlayerI player : players_) {
+            ret.add(player);
+        }
         return players_;
     }
 
     @Override
     public void setPlayers(List<PlayerI> players) throws NotImplementedException {
-
+        //don't test this
         this.players_ = players;
     }
 
@@ -83,4 +82,19 @@ public class Team implements TeamI {
     public void addPlayer(PlayerI player) {
         players_.add(player);
     }
+
+    @Override
+    public int getTeamSize() {
+        return players_.size();
+    }
+
+    @Override
+    public BufferedImage addPlayerByName(String name, int teamMemberNum) {
+        Random rand=new Random();
+        int randomNum= rand.nextInt(1000000000)+1;
+        PlayerI ret = new Player(name, randomNum, color_, teamMemberNum);
+        players_.add(ret);
+        return ret.getPlayerPiece();
+    }
+
 }

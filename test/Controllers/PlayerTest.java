@@ -3,9 +3,13 @@ package Controllers;
  * Created by zalmangagerman on 10/24/17.
  */
 import org.junit.jupiter.api.*;
+
+import static Config.BoardConstants.BLUE_PIECE_FILE;
+import static Config.BoardConstants.IMAGE_ENDING;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.UUID;
 import java.util.Random;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -16,39 +20,48 @@ import Models.PlayerI;
 import Models.Position;
 import Models.PositionI;
 
+import javax.imageio.ImageIO;
+
 import static Config.BoardConstants.TeamColor.*;
 
 public class PlayerTest {
     private String expectedName_;
-    private Image expectedPiece_;
+    private BufferedImage expectedPiece_;
     private int expectedId_;
     private TeamColor expectedTeam_;
     private PositionI expectedPosition_;
     private PlayerI actualPlayer_;
+    private int teamMemberNum_;
 
-    @AfterEach public void tearDown() throws Exception {
+    @AfterEach
+    public void tearDown() throws Exception {
         expectedName_ = null;
         expectedPiece_ = null;
         expectedId_ = -1;
         expectedTeam_ = null;
         expectedPosition_ = null;
         actualPlayer_ = null;
+        teamMemberNum_ = -1;
     }
 
-    @Test public void testConstructor() throws Exception {
+    @Test
+    public void testConstructor() throws Exception {
         expectedName_ = "ZalmanGagerman";
-        expectedPiece_ = generateImage();
         expectedId_ = 124531;
         expectedTeam_ = BLUE;
+        teamMemberNum_ = 1;
+        expectedPiece_ = ImageIO.read(new File(BLUE_PIECE_FILE + teamMemberNum_ + IMAGE_ENDING));
         expectedPosition_ = Player.startingPosition();
+        actualPlayer_ = new Player(expectedName_,
+                expectedId_, expectedTeam_, teamMemberNum_);
         assertEquals(expectedId_, actualPlayer_.getId());
         assertEquals(expectedTeam_, actualPlayer_.getTeam());
-        assertEquals(expectedPiece_, actualPlayer_.getPlayerPiece());
         assertEquals(expectedName_, actualPlayer_.getPlayerName());
         assertEquals(expectedPosition_, actualPlayer_.getPlayerPosition());
     }
 
-    @Test public void testMove() throws Exception {
+    @Test
+    public void testMove() throws Exception {
         createActualPlayer();
         int expectedRow = 5;
         int expectedCol = 2;
@@ -57,7 +70,8 @@ public class PlayerTest {
         assertEquals(expectedPosition_, actualPlayer_.getPlayerPosition());
     }
 
-    @Test public void setPlayerPosition() throws Exception {
+    @Test
+    public void setPlayerPosition() throws Exception {
         createActualPlayer();
         int expectedRow = 5;
         int expectedCol = 2;
@@ -73,33 +87,31 @@ public class PlayerTest {
         expectedId_ = actualPlayer_.getId();
         expectedTeam_ = actualPlayer_.getTeam();
         expectedPosition_ = actualPlayer_.getPlayerPosition();
-        actualPlayer_ = null /** new Player(expectedName_, expectedPiece_, expectedId_,
-                expectedTeam_)  **/;
+        teamMemberNum_ = 1;
+        actualPlayer_ = new Player(expectedName_, expectedId_,
+                expectedTeam_, teamMemberNum_);
         return actualPlayer_;
     }
-    
+
 
     public static PlayerI generatePlayer() throws Exception {
+        int teamMemberNum = 1;
+        return generatePlayer(teamMemberNum);
+
+    }
+
+    public static PlayerI generatePlayer(int teamMemberNum) throws Exception {
         String expectedName = "ZalmanGagerman";
-        Image expectedPiece = generateImage();
         int expectedId = 124531;
         TeamColor expectedTeam = BLUE;
-        PositionI expectedPosition = Player.startingPosition();
-        return null /** new Player(expectedName, expectedPiece, expectedId,
-                expectedTeam) **/;
+        return new Player(expectedName, expectedId,
+                expectedTeam, teamMemberNum);
     }
 
     public static PlayerI generateRandomPlayer(TeamColor team) throws Exception {
         String expectedName = UUID.randomUUID().toString();
-        Image expectedPiece = generateImage();
         int expectedId = new Random(1000000).nextInt() + 1;
         //todo what to do about position????
         throw new NotImplementedException();
     }
-
-    public static Image generateImage() {
-        return null; //todo
-    }
-
-
 }

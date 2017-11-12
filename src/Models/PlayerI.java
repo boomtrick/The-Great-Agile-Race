@@ -7,12 +7,14 @@ package Models;
 import Config.BoardConstants.TeamColor;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+
 public interface PlayerI {
     void move(int i, int j);
     int getId();
     TeamColor getTeam();
     String getPlayerName();
-    Image getPlayerPiece();
+    BufferedImage getPlayerPiece();
 
     void rememberFact(FactI factIn);
     boolean checkIfKnowsFact(FactI factIn);

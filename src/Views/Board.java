@@ -37,11 +37,11 @@ public class Board extends JPanel {
 	    populateBoard();
 	}
 
-	public void initPieces(Player player){
+	public void initPieces(BufferedImage playerPiece){
 		IDrawable d = new IDrawable() {
 			@Override
 			public void draw(Graphics g) {
-				g.drawImage(player.getPlayerPiece(), 0, 0, null);
+				g.drawImage(playerPiece, 0, 0, null);
 			}
 		};
 		tiles[9][0].setDrawable(d);

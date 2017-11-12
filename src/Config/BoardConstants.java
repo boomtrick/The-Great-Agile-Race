@@ -15,6 +15,10 @@ public class BoardConstants {
     final public static int INITIAL_ROW = 0;
     final public static int INITIAL_COLUMN = 0;
     final public static int DIE_SIZE = 6;
+    final public static String RED_PIECE_FILE = "src/Views/Images/red-piece_";
+    final public static String BLUE_PIECE_FILE = "src/Views/Images/blue-piece_";
+    final public static String IMAGE_ENDING = ".png";
+
 
     public final static boolean[][] spEvSpaces = new boolean[][]
             {       {false, false, true, false, false, true, false},

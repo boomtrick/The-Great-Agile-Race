@@ -42,6 +42,8 @@ public class GameBoard extends JFrame implements ActionListener{
 	private String [] bluePieces;
 	private String [] diceImages;
 
+    private final String EMPTY_SLOT = "<EMPTY SLOT>";
+
 	public GameBoard(){
 	}
 
@@ -111,8 +113,8 @@ public class GameBoard extends JFrame implements ActionListener{
 
 		//Create labels for player names
 		for (int i = 0; i <3; i++){
-			lblPlayersBlue.add(i, new JLabel("<Empty Slot>"));
-			lblPlayersRed.add(i, new JLabel("<Empty Slot>"));
+			lblPlayersBlue.add(i, new JLabel(EMPTY_SLOT));
+			lblPlayersRed.add(i, new JLabel(EMPTY_SLOT));
 		}
 
 		//Makes layout vertical
@@ -154,77 +156,31 @@ public class GameBoard extends JFrame implements ActionListener{
 		List<Player> redPlayers = new ArrayList<Player>();
 		List<Player> bluePlayers = new ArrayList<Player>();
 
-		Team redTeam;
-		Team blueTeam;
+		TeamI redTeam = new Team(TeamColor.RED);
+		TeamI blueTeam = new Team(TeamColor.BLUE);
 
 		if(button.equals(btnAddPlayerRed)){
 			String name = JOptionPane.showInputDialog(frame,"Welcome to Team Red.  What's your name? ");
-			if (!name.isEmpty()){
-
-				for(int i = 0; i < lblPlayersRed.size(); i++)
-				{
-					if(lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
-					{
+            if (!name.isEmpty()){
+				for(int i = 0; i < lblPlayersRed.size(); i++) {
+					if(lblPlayersRed.get(i).getText().equals(EMPTY_SLOT)) {
 						lblPlayersRed.get(i).setText(name);
-						Player player = null;
-
-						try {
-							//Get the piece, set the player
-							String path="src/Views/Images/";
-
-							redPieces=new String[]{path+"red-piece.png", path+"red-piece_1.png", path+"red-piece_2.png"};
-							player = new Player (name, ImageIO.read(new File(redPieces[i])), i,TeamColor.RED);
-
-							//log it
-							redPlayers.add(player);
-							gameLog.append(name +" added to Red Team.\n");
-
-							//	System.out.println(redPlayers.get(i).getPlayerName()+ " is added to the blue team internally");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-
-						board.initPieces(player);
+                        gameLog.append(name +" added to Red Team.\n");
+						board.initPieces(redTeam.addPlayerByName(name, i));
 						break;
-					}
+                    } } } }
 
-				}
-			}
-
-		}
-		if(button.equals(btnAddPlayerBlue)){
+        if(button.equals(btnAddPlayerBlue)){
 			String name = JOptionPane.showInputDialog("Welcome to Team Blue.  What's your name? ");
 
 			if (!name.isEmpty()){
-				for(int i = 0; i < lblPlayersBlue.size(); i++)
-				{
-					if(lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
-					{
+				for(int i = 0; i < lblPlayersBlue.size(); i++)  {
+					if(lblPlayersBlue.get(i).getText().equals(EMPTY_SLOT))  {
 						lblPlayersBlue.get(i).setText(name);
-
-						Player player = null;
-
-						try {
-							String path="src/Views/Images/";
-							bluePieces=new String[]{path+"blue-piece.png",path+"blue-piece_1.png", path+"blue-piece_2.png"};
-							player = new Player (name, ImageIO.read(new File(bluePieces[i])), i,TeamColor.BLUE);
-
-							bluePlayers.add(player);
-							gameLog.append(name +" added to Blue Team.\n");
-							//System.out.println(bluePlayers.get(i).getPlayerName()+ " is added to the blue team internally");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-
-						board.initPieces(player);
-
+                        gameLog.append(name +" added to Blue Team.\n");
+						board.initPieces(blueTeam.addPlayerByName(name, i));
 						break;
-					}
-				}
-			}
-		}
+                    } } } }
 
 		/*Look at what's been filled in and create board base d on that*/
 		if(button.equals(btnStartGame)){
@@ -243,7 +199,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		int bluePlayerCount = 0;
 		for(int i = 0; i < lblPlayersBlue.size(); i++)
 		{
-			if(!lblPlayersBlue.get(i).getText().equals("<Empty Slot>"))
+			if(!lblPlayersBlue.get(i).getText().equals(EMPTY_SLOT))
 			{
 				bluePlayerCount++;
 
@@ -254,7 +210,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		int redPlayerCount = 0;
 		for(int i = 0; i < lblPlayersRed.size(); i++)
 		{
-			if(!lblPlayersRed.get(i).getText().equals("<Empty Slot>"))
+			if(!lblPlayersRed.get(i).getText().equals(EMPTY_SLOT))
 			{
 				redPlayerCount++;
 			}
@@ -262,7 +218,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		//create team
 
 		//Team blueTeam = new Team(TeamColor.BLUE, bluePlayers);
-		Team redTeam = new Team(TeamColor.RED, redPlayerCount);
+		Team redTeam = new Team(TeamColor.RED);
 
 		System.out.println(bluePlayerCount);
 		System.out.println(redPlayerCount);

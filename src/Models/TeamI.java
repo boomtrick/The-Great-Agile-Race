@@ -2,6 +2,7 @@ package Models;
 
 import Config.BoardConstants.TeamColor;
 
+import java.awt.image.BufferedImage;
 import java.util.List;
 
 /**
@@ -12,4 +13,6 @@ public interface TeamI {
     List<PlayerI> getPlayers();
     void setPlayers(List<PlayerI> players);
     void addPlayer(PlayerI player);
+    int getTeamSize();
+    BufferedImage addPlayerByName(String name, int teamMemberNum);
 }
