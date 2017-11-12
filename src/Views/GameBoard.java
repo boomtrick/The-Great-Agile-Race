@@ -92,7 +92,7 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	//Shows a fact that's randomized
 	public void triggerRandomFact(){
-		FactI newFact = new Fact(new DialogueParser());
+		Fact newFact = new Fact(1);
 		//Shows random fact
 		JOptionPane.showMessageDialog(frame, newFact.getText());
 		//Note that player has seen the fact

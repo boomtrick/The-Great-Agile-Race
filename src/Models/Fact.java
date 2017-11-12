@@ -1,10 +1,9 @@
 package Models;
 
-import java.util.Random;
-
-public class Fact implements FactI {
+public class Fact {
 	/*
-        Holds getters, setters and methods for accessing Fact data
+        Holds getters, setters and methods for accessing Fact
+        Please do not change the constructors/variables for this class, it's needed for GSON to work properly
      */
 	private int id;
 	private String text;
@@ -12,12 +11,18 @@ public class Fact implements FactI {
 
 
 
-	public Fact(DialogueParserI dp)
+	public Fact(int id)
 	{
-		Random rand = new Random();
-		id = rand.nextInt(25) + 1;
+
+		DialogueParserI dp = new DialogueParser();
 		Response response = dp.getResponse();
+
+		this.id = id;
 		this.text =  response.getFactByID(id);
+	}
+
+	public Fact() {
+		//There should be such a thing as an empty fact // todo
 	}
 
 //
@@ -27,20 +32,16 @@ public class Fact implements FactI {
 //		return false;
 //	}
 
-    @Override
-	public String getText() {
+    public String getText() {
         return text;
     }
-	@Override
 	public int getId()
 	{
 		return id;
 	}
-	@Override
 	public void setId(int id) {
 		this.id = id;
 	}
-	@Override
 	public void setText(String text) {
 		this.text = text;
 	}

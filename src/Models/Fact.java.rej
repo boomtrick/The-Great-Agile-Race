@@ -1,0 +1,21 @@
+diff a/src/Models/Fact.java b/src/Models/Fact.java	(rejected hunks)
+@@ -16,14 +16,19 @@
+  
+  
+  
+ -	public Fact(int id)
+ +	public Fact(DialogueParserI dp)
+  	{
+++<<<<<<< HEAD
+ +		Random rand = new Random();
+ +		id = rand.nextInt(25) + 1;
+++=======
++ 
++ 		DialogueParser dp = new DialogueParser();
+++>>>>>>> parent of f8bec12... Made Model files into interfaces
+  		Response response = dp.getResponse();
+ -
+ -		this.id = id;
+  		this.text =  response.getFactByID(id);
+  	}
+  
