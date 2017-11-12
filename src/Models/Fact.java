@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Random;
+
 public class Fact {
 	/*
         Holds getters, setters and methods for accessing Fact
@@ -22,6 +24,7 @@ public class Fact {
 	}
 
 	public Fact() {
+
 		//There should be such a thing as an empty fact // todo
 	}
 

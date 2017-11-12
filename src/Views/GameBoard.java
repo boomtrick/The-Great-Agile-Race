@@ -92,7 +92,9 @@ public class GameBoard extends JFrame implements ActionListener{
 
 	//Shows a fact that's randomized
 	public void triggerRandomFact(){
-		Fact newFact = new Fact(1);
+		Random rand = new Random();
+		int n = rand.nextInt(25)+1;
+		Fact newFact = new Fact(n);
 		//Shows random fact
 		JOptionPane.showMessageDialog(frame, newFact.getText());
 		//Note that player has seen the fact
@@ -114,7 +116,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		this.txtRedTeam = new JLabel("Red Team");
 
 		//Create labels for player names
-		for (int i = 0; i <3; i++){
+		for (int i = 0; i <4; i++){
 			lblPlayersBlue.add(i, new JLabel(EMPTY_SLOT));
 			lblPlayersRed.add(i, new JLabel(EMPTY_SLOT));
 		}
@@ -143,6 +145,7 @@ public class GameBoard extends JFrame implements ActionListener{
 		btnAddPlayerBlue.addActionListener(this);
 		btnAddPlayerRed.addActionListener(this);
 		btnStartGame.addActionListener(this::buttonEvent);
+		btnRollDice.addActionListener(this::buttonEvent);
 		return panelIn;
 
 	}
@@ -197,6 +200,20 @@ public class GameBoard extends JFrame implements ActionListener{
 			btnAddPlayerRed.setVisible(false);
 
 		}
+		/*Look at what's been filled in and create board base d on that*/
+		if(button.equals(btnRollDice)){
+
+			RollDice();
+
+			triggerRandomFact();
+
+		}
+	}
+
+	private void RollDice() {
+		Dice rollDice = new Dice();
+		int rollNum = rollDice.roll();
+		gameLog.append("Dice rolled "+rollNum+".\n");
 	}
 
 	private void SetupGame() {
@@ -230,7 +247,6 @@ public class GameBoard extends JFrame implements ActionListener{
 
 
 
-		triggerRandomFact();
 		//Hide startgame button
 		btnStartGame.setVisible(false);
 		btnRollDice.setVisible(true);
