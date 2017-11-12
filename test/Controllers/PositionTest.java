@@ -8,10 +8,8 @@ import org.junit.jupiter.api.*;
 import Models.Position;
 import Models.PositionI;
 
+import static Config.BoardConstants.*;
 import static org.junit.jupiter.api.Assertions.*;
-
-import static Config.BoardConstants.INITIAL_COLUMN;
-import static Config.BoardConstants.INITIAL_ROW;
 
 public class PositionTest {
 
@@ -41,7 +39,7 @@ public class PositionTest {
     @Test public void testSetCol() throws Exception {
         PositionI actualPosition = new Position();
         int expectedCol = 5;
-        actualPosition.setRow(expectedCol);
+        actualPosition.setCol(expectedCol);
         assertEquals(expectedCol, actualPosition.getCol());
     }
 
@@ -51,6 +49,86 @@ public class PositionTest {
         int expectedCol = 6;
         actualPosition.setPosition(expectedRow, expectedCol);
         assertEquals(expectedRow, actualPosition.getRow());
-
     }
+
+    @Test
+    public void testSetPositionIllegalDouble() throws Exception {
+        int expectedRow;
+        int expectedCol;
+
+        PositionI actualPosition = new Position();
+
+        expectedRow = -5;
+        expectedCol = 6;
+        try {
+            actualPosition.setPosition(expectedRow, expectedCol);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+
+        expectedRow = ROW_SIZE + 1;
+        expectedCol = 6;
+        try {
+            actualPosition.setPosition(expectedRow, expectedCol);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+
+        expectedRow = 2;
+        expectedCol = -10;
+        try {
+            actualPosition.setPosition(expectedRow, expectedCol);
+        } catch (IllegalArgumentException iae) {
+        }
+
+        expectedRow = 2;
+        expectedCol = COL_SIZE + 1;
+        try {
+            actualPosition.setPosition(expectedRow, expectedCol);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+    }
+
+    @Test
+    public void testSetRowIllegal() throws Exception {
+        int expectedRow;
+        PositionI actualPosition = new Position();
+
+        expectedRow = -5;
+        try {
+            actualPosition.setRow(expectedRow);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+
+        expectedRow = ROW_SIZE + 1;
+        try {
+            actualPosition.setRow(expectedRow);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+    }
+
+    @Test
+    public void testSetColIllegal() throws Exception {
+        int expectedCol;
+        PositionI actualPosition = new Position();
+
+        expectedCol = -5;
+        try {
+            actualPosition.setCol(expectedCol);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+
+        expectedCol = COL_SIZE + 1;
+        try {
+            actualPosition.setCol(expectedCol);
+            fail("Should have thrown IAE");
+        } catch (IllegalArgumentException iae) {
+        }
+    }
+
+
 }

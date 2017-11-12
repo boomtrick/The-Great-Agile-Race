@@ -1,7 +1,6 @@
 package Models;
 
-import static Config.BoardConstants.INITIAL_COLUMN;
-import static Config.BoardConstants.INITIAL_ROW;
+import static Config.BoardConstants.*;
 
 /**
  * 
@@ -27,7 +26,16 @@ public class Position implements PositionI {
 	}
 
     public Position(int row, int col) {
-        row_ = row;
+        if (row < INITIAL_ROW) {
+            throw new IllegalArgumentException("Row too small");
+        } if (row >= ROW_SIZE) {
+            throw new IllegalArgumentException("Row too big");
+        } if (col < INITIAL_COLUMN) {
+            throw new IllegalArgumentException("Column too small");
+        } if (col >= COL_SIZE) {
+            throw new IllegalArgumentException("Column too big");
+        }
+		row_ = row;
         col_ = col;
     }
 
@@ -38,7 +46,12 @@ public class Position implements PositionI {
 
     @Override
 	public void setRow(int row) {
-		this.row_ = row;
+        if (row < INITIAL_ROW) {
+            throw new IllegalArgumentException("Row too small");
+        } if (row >= ROW_SIZE) {
+            throw new IllegalArgumentException("Row too big");
+        }
+        this.row_ = row;
 	}
 
     @Override
@@ -48,12 +61,26 @@ public class Position implements PositionI {
 
     @Override
 	public void setCol(int col) {
-		this.col_ = col;
+        if (col < INITIAL_COLUMN) {
+            throw new IllegalArgumentException("Column too small");
+        } if (col >= COL_SIZE) {
+            throw new IllegalArgumentException("Column too big");
+        }
+        this.col_ = col;
 	}
 
     @Override
 	public void setPosition(int row, int col) {
-		row_ = row;
+        if (row < INITIAL_ROW) {
+            throw new IllegalArgumentException("Row too small");
+        } if (row >= ROW_SIZE) {
+            throw new IllegalArgumentException("Row too big");
+        } if (col < INITIAL_COLUMN) {
+            throw new IllegalArgumentException("Column too small");
+        } if (col >= COL_SIZE) {
+            throw new IllegalArgumentException("Column too big");
+        }
+        row_ = row;
 		col_ = col;
 	}
 

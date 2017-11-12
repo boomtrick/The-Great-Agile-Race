@@ -20,9 +20,7 @@ public class Quiz implements QuizI {
 	private Map<String,String> options = new HashMap<String,String>();
 
 	
-	public Quiz()
-	{
-		//There should be such a thing as an empty Quiz //todo
+	public Quiz() {
 	}
 
 	//Checks if answer is correct, returns true or false
@@ -52,26 +50,6 @@ public class Quiz implements QuizI {
 		options.put("D", d);
 	    return Arrays.toString(options.entrySet().toArray());
     }
-	@Override
-    public String getOption(String option)
-	{
-		return options.get(option);
-	}
-	@Override
-    public int getRelatedFact()
-	{
-		return relatedFact;
-	}
-	@Override
-	public int getId()
-	{
-		return id;
-	}
-	@Override
-    public String getQuestion()
-	{
-		return question;
-	}
 	@Override
     public void setId(int id) {
 		this.id = id;
@@ -120,6 +98,24 @@ public class Quiz implements QuizI {
     public String getD() {
 		return d;
 	}
-
-
+    @Override
+    public String getOption(String option)
+    {
+        return options.get(option);
+    }
+    @Override
+    public int getRelatedFact()
+    {
+        return relatedFact;
+    }
+    @Override
+    public int getId()
+    {
+        return id;
+    }
+    @Override
+    public String getQuestion()
+    {
+        return question;
+    }
 }
