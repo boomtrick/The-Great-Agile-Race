@@ -10,7 +10,10 @@ public class Fact {
 	private String text;
 
 
-
+	public Fact(int id, Response response) {
+        this.id = id;
+        text = response.getFactByID(id);
+    }
 
 	public Fact(int id)
 	{

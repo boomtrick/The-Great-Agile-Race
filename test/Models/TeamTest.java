@@ -10,6 +10,8 @@ import Config.*;
 
 import java.util.List;
 
+import static org.mockito.Mockito.*;
+
 import static Config.BoardConstants.TeamColor.*;
 
 public class TeamTest {
@@ -33,6 +35,30 @@ public class TeamTest {
         assertEquals(expectedPlayer.getTeam(), actualPlayer.getTeam());
         assertEquals(expectedPlayer.getPlayerName(), actualPlayer.getPlayerName());
         assertEquals(expectedPlayer.getPlayerPosition(), actualPlayer.getPlayerPosition());
+    }
 
+    @Test public void testAddPlayerMockito() throws Exception {
+        PlayerI mockPlayer = mock(PlayerI.class);
+        int expectedId = 1234;
+        String expectedPlayerName = "ValuedTeamMember";
+        PositionI mockPosition = mock(PositionI.class);
+        int expectedRow = 4;
+        int expectedCol = 5;
+        when(mockPosition.getRow()).thenReturn(expectedRow);
+        when(mockPosition.getCol()).thenReturn(expectedCol);
+        BoardConstants.TeamColor expectedColor = BLUE;
+
+        when(mockPlayer.getId()).thenReturn(expectedId);
+        when(mockPlayer.getPlayerName()).thenReturn(expectedPlayerName);
+        when(mockPlayer.getPlayerPiece()).thenReturn(null);
+        when(mockPlayer.getPlayerPosition()).thenReturn(mockPosition);
+        when(mockPlayer.getTeam()).thenReturn(expectedColor);
+
+        assertEquals(expectedId, mockPlayer.getId());
+        assertEquals(expectedColor, mockPlayer.getTeam());
+        assertEquals(expectedPlayerName, mockPlayer.getPlayerName());
+        assertEquals(expectedCol, mockPlayer.getPlayerPosition().getCol());
+        assertEquals(expectedRow, mockPlayer.getPlayerPosition().getRow());
+        assertEquals(null, mockPlayer.getPlayerPiece());
     }
 }
